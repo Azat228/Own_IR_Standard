@@ -1,35 +1,49 @@
-#define REC_COM 11
-void setup() {
-   Serial.begin(9600);
-  pinMode(IR_PIN, INPUT);
-}
-
-void loop() {
-  #define IR_PIN 2
+const int receiverPin = 2; // Pin connected to the IR receiver
+volatile unsigned long lastTime = 0;
+volatile unsigned long pulseTime = 0;
+volatile bool newData = false;
+int bits[8]; // Store received bits
+int count = 0; // Count of bits received
 
 void setup() {
   Serial.begin(9600);
-  pinMode(IR_PIN, INPUT);
+  pinMode(receiverPin, INPUT);
+  attachInterrupt(digitalPinToInterrupt(receiverPin), decodeIR, CHANGE);
 }
 
 void loop() {
-  // Wait for start pulse (assume active LOW from receiver)
-  if (pulseIn(IR_PIN, LOW, 30000) > 1800) { // Wait for ~2ms LOW (start)
-    Serial.println("Start detected");
+  if (newData) {
+    newData = false;
 
-    uint8_t data = 0;
-    for (int i = 0; i < 8; i++) { // Example: 8 bits
-      unsigned long lowTime = pulseIn(IR_PIN, LOW, 5000);   // Expect ~1ms
-      unsigned long highTime = pulseIn(IR_PIN, HIGH, 5000); // 0.5ms or 1.5ms
+    // Store the received bit in the bits array
+    bits[count++] = (pulseTime > 300) ? 1 : 0; // 300 microseconds for 1
 
-      if (highTime > 1000) { // threshold between 0.5ms and 1.5ms
-        data |= (1 << i); // Bit 1
-      }
-      // else Bit 0 (default, do nothing)
+    // If 32 bits are received, process the data
+    if (count == 8) {
+      processData();
+      count = 0; // Reset count for next sequence
     }
-    Serial.print("Data: ");
-    Serial.println(data, BIN);
   }
 }
 
+void decodeIR() {
+  if (digitalRead(receiverPin) == HIGH) {
+    lastTime = micros(); // Record the time when the signal goes high
+  } else {
+    pulseTime = micros() - lastTime; // Calculate pulse duration
+    newData = true; // Signal that new data is available
+  }
+}
+
+void processData() {
+  unsigned long command = 0;
+
+  // First 16 bits are the address
+
+  // Next 16 bits are the command
+  for (int i = 8; i < 32; i++) {
+    command = (command << 1) | bits[i];
+  }
+  Serial.print("Command: ");
+  Serial.println(command, HEX);
 }
