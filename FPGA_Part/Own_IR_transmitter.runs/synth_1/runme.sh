@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log IR_transmission.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source IR_transmission.tcl
+EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
