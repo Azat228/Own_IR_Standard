@@ -1,6 +1,6 @@
-# NEC Standard IR Communication Project
+# OWN Standard IR Communication Project
 
-This project demonstrates IR communication using the NEC protocol with two components:
+This project demonstrates IR communication using my own protocol(this protocol is very similar to nec) with two components:
 1. **PYNQ Z2 FPGA** (Processing System - PS and Programmable Logic - PL)
 2. **Arduino Uno (Receiver)**
 
@@ -46,7 +46,7 @@ This project demonstrates IR communication using the NEC protocol with two compo
 ### File Structure
 NEC-standard-IR-communication/<br>
 ├── arduino_part/<br>
-│ └── IR_TransmitterReceiver.ino (for Arduino)<br>
+│ └── IR_receiver_own.ino (for Arduino)<br>
 |──PS part<br>
 │ └── nec_onlyFPGA.ipynb<br>
 │ ── xilinx/overlays/nec<br>
@@ -69,6 +69,8 @@ NEC-standard-IR-communication/<br>
 3. Arduino will:
    - Receive the IR signals via pin 11
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
+## Something about my own standard
+My standard is similar to NEC, but it use only 8 bit for transmitting the code only and also the timing in nec is 10 times faster   
 
 ## 🔧 Troubleshooting
 | Issue | Solution |

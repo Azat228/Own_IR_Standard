@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-| Date             : Sun Aug 17 00:01:37 2025
+| Date             : Sun Aug 17 01:02:20 2025
 | Host             : Azat running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     2760 |       --- |             --- |
-|   LUT as Logic          |     0.002 |      926 |     53200 |            1.74 |
+| Slice Logic             |     0.003 |     2749 |       --- |             --- |
+|   LUT as Logic          |     0.002 |      937 |     53200 |            1.76 |
 |   Register              |    <0.001 |     1221 |    106400 |            1.15 |
 |   CARRY4                |    <0.001 |       62 |     13300 |            0.47 |
 |   F7/F8 Muxes           |    <0.001 |        1 |     53200 |           <0.01 |
 |   LUT as Shift Register |    <0.001 |       61 |     17400 |            0.35 |
 |   Others                |     0.000 |      221 |       --- |             --- |
-| Signals                 |     0.004 |     2008 |       --- |             --- |
+| Signals                 |     0.004 |     1994 |       --- |             --- |
 | I/O                     |    <0.001 |        1 |       125 |            0.80 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.138 |          |           |                 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.025 |       0.012 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.026 |       0.013 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -150,11 +150,11 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.268 |
-|   design_1_i             |     1.268 |
+| design_1_wrapper         |     1.269 |
+|   design_1_i             |     1.269 |
 |     IR_transmission_0    |     0.001 |
 |       inst               |     0.001 |
-|     axi_interconnect_0   |     0.009 |
+|     axi_interconnect_0   |     0.010 |
 |       m00_couplers       |     0.005 |
 |       xbar               |     0.005 |
 |     processing_system7_0 |     1.257 |
