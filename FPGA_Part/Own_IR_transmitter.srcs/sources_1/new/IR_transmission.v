@@ -11,12 +11,12 @@ module IR_transmission (
     parameter CARRIER_FREQ = 38_000;
     
     localparam CLK_DIV = 1644;
-    localparam LEADING_PULSE = 125000;// 1000 microseconds
+    localparam LEADING_PULSE = 1125000;
    
-    localparam LEADING_SPACE = 62500;//500  microseconds
-    localparam BIT_PULSE = 12500;//100 microseconds
-    localparam BIT0_SPACE = 25000;//200 microseconds
-    localparam BIT1_SPACE = 12500;
+    localparam LEADING_SPACE = 562500;
+    localparam BIT_PULSE = 70250;
+    localparam BIT0_SPACE = 70250;
+    localparam BIT1_SPACE = 210750;
     localparam RELAX_BETWEEN_STATES = 400_000_000;
     
 

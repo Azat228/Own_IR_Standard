@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-| Date             : Sat Aug 16 23:29:35 2025
+| Date             : Sun Aug 17 00:01:37 2025
 | Host             : Azat running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.406        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.268        |
+| Dynamic (W)              | 1.269        |
 | Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.8         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        3 |       --- |             --- |
-| Slice Logic             |     0.002 |     2746 |       --- |             --- |
-|   LUT as Logic          |     0.002 |      917 |     53200 |            1.72 |
+| Slice Logic             |     0.003 |     2760 |       --- |             --- |
+|   LUT as Logic          |     0.002 |      926 |     53200 |            1.74 |
 |   Register              |    <0.001 |     1221 |    106400 |            1.15 |
 |   CARRY4                |    <0.001 |       62 |     13300 |            0.47 |
 |   F7/F8 Muxes           |    <0.001 |        1 |     53200 |           <0.01 |
 |   LUT as Shift Register |    <0.001 |       61 |     17400 |            0.35 |
 |   Others                |     0.000 |      221 |       --- |             --- |
-| Signals                 |     0.004 |     1996 |       --- |             --- |
+| Signals                 |     0.004 |     2008 |       --- |             --- |
 | I/O                     |    <0.001 |        1 |       125 |            0.80 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.138 |          |           |                 |
@@ -152,7 +152,9 @@ Table of Contents
 +--------------------------+-----------+
 | design_1_wrapper         |     1.268 |
 |   design_1_i             |     1.268 |
-|     axi_interconnect_0   |     0.010 |
+|     IR_transmission_0    |     0.001 |
+|       inst               |     0.001 |
+|     axi_interconnect_0   |     0.009 |
 |       m00_couplers       |     0.005 |
 |       xbar               |     0.005 |
 |     processing_system7_0 |     1.257 |
