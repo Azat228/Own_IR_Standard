@@ -1,11 +1,11 @@
 module IR_transmission (
     input  clk,
-    input  wire[7:0] code,
+    input  wire[4:0] code,
+    input  wire[4:0] addr,
     input  send,
     output reg ir_out
 );
 
-    wire [7:0] cmd = code; // Bypass decoder
 
     parameter CLK_FREQ = 125_000_000;
     parameter CARRIER_FREQ = 38_000;
@@ -48,7 +48,7 @@ module IR_transmission (
                 counter <= 0;
                 bit_count <= 0;
                 if (send ) begin
-                    shift_reg <= {cmd};
+                    shift_reg <= {addr,code};
                     state <= START_PULSE;
                 end
             end

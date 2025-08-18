@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-// Date        : Sun Aug 17 00:58:38 2025
+// Date        : Mon Aug 18 20:52:40 2025
 // Host        : Azat running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_IR_transmission_0_0_sim_netlist.v
@@ -14,11 +14,13 @@
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
    (ir_out,
+    addr,
     code,
     clk,
     send);
   output ir_out;
-  input [7:0]code;
+  input [2:0]addr;
+  input [4:0]code;
   input clk;
   input send;
 
@@ -47,6 +49,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
   wire \FSM_sequential_state[2]_i_7_n_0 ;
   wire \FSM_sequential_state[2]_i_8_n_0 ;
   wire \FSM_sequential_state[2]_i_9_n_0 ;
+  wire [2:0]addr;
   wire bit_count;
   wire [5:0]bit_count_reg;
   wire carrier;
@@ -73,7 +76,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
   wire carrier_i_1_n_0;
   wire carrier_reg_n_0;
   wire clk;
-  wire [7:0]code;
+  wire [4:0]code;
   wire counter0;
   wire counter0_carry__0_n_0;
   wire counter0_carry__0_n_1;
@@ -1582,7 +1585,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
        (.I0(state[1]),
         .I1(\shift_reg_reg_n_0_[4] ),
         .I2(state[2]),
-        .I3(code[5]),
+        .I3(addr[0]),
         .O(\shift_reg[5]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h4540)) 
@@ -1590,7 +1593,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
        (.I0(state[1]),
         .I1(\shift_reg_reg_n_0_[5] ),
         .I2(state[2]),
-        .I3(code[6]),
+        .I3(addr[1]),
         .O(\shift_reg[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF54040000)) 
@@ -1632,7 +1635,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
        (.I0(state[1]),
         .I1(\shift_reg_reg_n_0_[6] ),
         .I2(state[2]),
-        .I3(code[7]),
+        .I3(addr[2]),
         .O(\shift_reg[7]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEEEECEEECEEEC)) 
@@ -1752,20 +1755,24 @@ endmodule
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk,
     code,
+    addr,
     send,
     ir_out);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
-  input [7:0]code;
+  input [4:0]code;
+  input [4:0]addr;
   input send;
   output ir_out;
 
+  wire [4:0]addr;
   wire clk;
-  wire [7:0]code;
+  wire [4:0]code;
   wire ir_out;
   wire send;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission inst
-       (.clk(clk),
+       (.addr(addr[2:0]),
+        .clk(clk),
         .code(code),
         .ir_out(ir_out),
         .send(send));

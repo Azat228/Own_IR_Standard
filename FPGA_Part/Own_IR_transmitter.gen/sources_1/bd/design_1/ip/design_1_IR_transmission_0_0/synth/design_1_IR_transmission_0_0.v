@@ -58,6 +58,7 @@
 module design_1_IR_transmission_0_0 (
   clk,
   code,
+  addr,
   send,
   ir_out
 );
@@ -65,7 +66,8 @@ module design_1_IR_transmission_0_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-input wire [7 : 0] code;
+input wire [4 : 0] code;
+input wire [4 : 0] addr;
 input wire send;
 output wire ir_out;
 
@@ -82,6 +84,7 @@ output wire ir_out;
   ) inst (
     .clk(clk),
     .code(code),
+    .addr(addr),
     .send(send),
     .ir_out(ir_out)
   );

@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
--- Date        : Sun Aug 17 00:58:39 2025
+-- Date        : Mon Aug 18 20:52:40 2025
 -- Host        : Azat running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_IR_transmission_0_0_sim_netlist.vhdl
@@ -17,7 +17,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission is
   port (
     ir_out : out STD_LOGIC;
-    code : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addr : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    code : in STD_LOGIC_VECTOR ( 4 downto 0 );
     clk : in STD_LOGIC;
     send : in STD_LOGIC
   );
@@ -2133,7 +2134,7 @@ pulse_active_reg: unisim.vcomponents.FDRE
       I0 => state(1),
       I1 => \shift_reg_reg_n_0_[4]\,
       I2 => state(2),
-      I3 => code(5),
+      I3 => addr(0),
       O => \shift_reg[5]_i_1_n_0\
     );
 \shift_reg[6]_i_1\: unisim.vcomponents.LUT4
@@ -2144,7 +2145,7 @@ pulse_active_reg: unisim.vcomponents.FDRE
       I0 => state(1),
       I1 => \shift_reg_reg_n_0_[5]\,
       I2 => state(2),
-      I3 => code(6),
+      I3 => addr(1),
       O => \shift_reg[6]_i_1_n_0\
     );
 \shift_reg[7]_i_1\: unisim.vcomponents.LUT6
@@ -2199,7 +2200,7 @@ pulse_active_reg: unisim.vcomponents.FDRE
       I0 => state(1),
       I1 => \shift_reg_reg_n_0_[6]\,
       I2 => state(2),
-      I3 => code(7),
+      I3 => addr(2),
       O => \shift_reg[7]_i_2_n_0\
     );
 \shift_reg[7]_i_3\: unisim.vcomponents.LUT6
@@ -2355,7 +2356,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     clk : in STD_LOGIC;
-    code : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    code : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     send : in STD_LOGIC;
     ir_out : out STD_LOGIC
   );
@@ -2379,8 +2381,9 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_IR_transmission
      port map (
+      addr(2 downto 0) => addr(2 downto 0),
       clk => clk,
-      code(7 downto 0) => code(7 downto 0),
+      code(4 downto 0) => code(4 downto 0),
       ir_out => ir_out,
       send => send
     );

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-| Date         : Sat Aug 16 23:27:26 2025
+| Date         : Mon Aug 18 20:52:48 2025
 | Host         : Azat running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
 | Design       : design_1_xbar_0
@@ -27,20 +27,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  528 |     0 |     53200 |  0.99 |
-|   LUT as Logic             |  526 |     0 |     53200 |  0.99 |
-|   LUT as Memory            |    2 |     0 |     17400 |  0.01 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |    2 |     0 |           |       |
-| Slice Registers            |  773 |     0 |    106400 |  0.73 |
-|   Register as Flip Flop    |  773 |     0 |    106400 |  0.73 |
-|   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
-| F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
-+----------------------------+------+-------+-----------+-------+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             |  122 |     0 |     53200 |  0.23 |
+|   LUT as Logic          |  122 |     0 |     53200 |  0.23 |
+|   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
+| Slice Registers         |  130 |     0 |    106400 |  0.12 |
+|   Register as Flip Flop |  130 |     0 |    106400 |  0.12 |
+|   Register as Latch     |    0 |     0 |    106400 |  0.00 |
+| F7 Muxes                |    0 |     0 |     26600 |  0.00 |
+| F8 Muxes                |    0 |     0 |     13300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -58,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 12    |          Yes |         Set |            - |
-| 761   |          Yes |       Reset |            - |
+| 0     |          Yes |         Set |            - |
+| 130   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,16 +146,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  761 |        Flop & Latch |
-| LUT6     |  279 |                 LUT |
-| LUT3     |  140 |                 LUT |
-| LUT5     |   95 |                 LUT |
-| LUT4     |   88 |                 LUT |
-| LUT1     |   38 |                 LUT |
-| CARRY4   |   32 |          CarryLogic |
-| FDSE     |   12 |        Flop & Latch |
+| FDRE     |  130 |        Flop & Latch |
+| LUT6     |   54 |                 LUT |
+| LUT4     |   49 |                 LUT |
+| LUT5     |   16 |                 LUT |
 | LUT2     |    9 |                 LUT |
-| SRLC32E  |    2 |  Distributed Memory |
+| LUT3     |    5 |                 LUT |
+| LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 
 

@@ -17,15 +17,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 35096
+INFO: [Synth 8-7075] Helper process launched with PID 20396
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1223.914 ; gain = 38.070
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1223.184 ; gain = 34.457
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/synth/design_1_auto_pc_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_22_axi_protocol_converter' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_M_AXI_PROTOCOL bound to: 2 - type: integer 
-	Parameter C_S_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_IGNORE_ID bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -49,7 +49,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_22_axi_pro
 	Parameter P_PROTECTION bound to: 1 - type: integer 
 	Parameter P_CONVERSION bound to: 2 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_22_b2s' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4226]
-	Parameter C_S_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -152,7 +152,7 @@ INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_22_b2
 INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_22_b2s_r_channel' (10#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3811]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_register_slice' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
-	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -184,7 +184,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_registe
 	Parameter C_PIPELINES_MIDDLE_B bound to: 0 - type: integer 
 	Parameter C_PIPELINES_MIDDLE_AR bound to: 0 - type: integer 
 	Parameter C_PIPELINES_MIDDLE_R bound to: 0 - type: integer 
-	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 1 - type: integer 
+	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 0 - type: integer 
 	Parameter P_FORWARD bound to: 0 - type: integer 
 	Parameter P_RESPONSE bound to: 1 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
@@ -198,18 +198,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_registe
 	Parameter G_AXI_AWCACHE_INDEX bound to: 40 - type: integer 
 	Parameter G_AXI_AWCACHE_WIDTH bound to: 4 - type: integer 
 	Parameter G_AXI_AWLEN_INDEX bound to: 44 - type: integer 
-	Parameter G_AXI_AWLEN_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_AWLOCK_INDEX bound to: 52 - type: integer 
-	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
-	Parameter G_AXI_AWID_INDEX bound to: 53 - type: integer 
+	Parameter G_AXI_AWLEN_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWLOCK_INDEX bound to: 48 - type: integer 
+	Parameter G_AXI_AWLOCK_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_AWID_INDEX bound to: 50 - type: integer 
 	Parameter G_AXI_AWID_WIDTH bound to: 12 - type: integer 
-	Parameter G_AXI_AWQOS_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 62 - type: integer 
 	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWREGION_INDEX bound to: 69 - type: integer 
-	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWUSER_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_AWREGION_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 66 - type: integer 
 	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_ARADDR_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_ARPROT_INDEX bound to: 32 - type: integer 
@@ -221,18 +221,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_registe
 	Parameter G_AXI_ARCACHE_INDEX bound to: 40 - type: integer 
 	Parameter G_AXI_ARCACHE_WIDTH bound to: 4 - type: integer 
 	Parameter G_AXI_ARLEN_INDEX bound to: 44 - type: integer 
-	Parameter G_AXI_ARLEN_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_ARLOCK_INDEX bound to: 52 - type: integer 
-	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
-	Parameter G_AXI_ARID_INDEX bound to: 53 - type: integer 
+	Parameter G_AXI_ARLEN_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARLOCK_INDEX bound to: 48 - type: integer 
+	Parameter G_AXI_ARLOCK_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_ARID_INDEX bound to: 50 - type: integer 
 	Parameter G_AXI_ARID_WIDTH bound to: 12 - type: integer 
-	Parameter G_AXI_ARQOS_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 62 - type: integer 
 	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARREGION_INDEX bound to: 69 - type: integer 
-	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARUSER_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_ARREGION_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 66 - type: integer 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_WDATA_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_WSTRB_INDEX bound to: 32 - type: integer 
@@ -240,10 +240,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_registe
 	Parameter G_AXI_WLAST_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WLAST_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_WID_INDEX bound to: 37 - type: integer 
-	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WUSER_INDEX bound to: 37 - type: integer 
+	Parameter G_AXI_WID_WIDTH bound to: 12 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 49 - type: integer 
 	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 37 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 49 - type: integer 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
@@ -263,21 +263,21 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axi_registe
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
-	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 1 - type: integer 
+	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_AWPAYLOAD_WIDTH bound to: 73 - type: integer 
-	Parameter C_WPAYLOAD_WIDTH bound to: 37 - type: integer 
+	Parameter C_AWPAYLOAD_WIDTH bound to: 66 - type: integer 
+	Parameter C_WPAYLOAD_WIDTH bound to: 49 - type: integer 
 	Parameter C_BPAYLOAD_WIDTH bound to: 14 - type: integer 
-	Parameter C_ARPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter C_ARPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter C_RPAYLOAD_WIDTH bound to: 47 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_AWADDR_WIDTH bound to: 32 - type: integer 
@@ -290,18 +290,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_AWCACHE_INDEX bound to: 40 - type: integer 
 	Parameter G_AXI_AWCACHE_WIDTH bound to: 4 - type: integer 
 	Parameter G_AXI_AWLEN_INDEX bound to: 44 - type: integer 
-	Parameter G_AXI_AWLEN_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_AWLOCK_INDEX bound to: 52 - type: integer 
-	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
-	Parameter G_AXI_AWID_INDEX bound to: 53 - type: integer 
+	Parameter G_AXI_AWLEN_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWLOCK_INDEX bound to: 48 - type: integer 
+	Parameter G_AXI_AWLOCK_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_AWID_INDEX bound to: 50 - type: integer 
 	Parameter G_AXI_AWID_WIDTH bound to: 12 - type: integer 
-	Parameter G_AXI_AWQOS_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 62 - type: integer 
 	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWREGION_INDEX bound to: 69 - type: integer 
-	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWUSER_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_AWREGION_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 66 - type: integer 
 	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_ARADDR_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_ARPROT_INDEX bound to: 32 - type: integer 
@@ -313,18 +313,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_ARCACHE_INDEX bound to: 40 - type: integer 
 	Parameter G_AXI_ARCACHE_WIDTH bound to: 4 - type: integer 
 	Parameter G_AXI_ARLEN_INDEX bound to: 44 - type: integer 
-	Parameter G_AXI_ARLEN_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_ARLOCK_INDEX bound to: 52 - type: integer 
-	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
-	Parameter G_AXI_ARID_INDEX bound to: 53 - type: integer 
+	Parameter G_AXI_ARLEN_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARLOCK_INDEX bound to: 48 - type: integer 
+	Parameter G_AXI_ARLOCK_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_ARID_INDEX bound to: 50 - type: integer 
 	Parameter G_AXI_ARID_WIDTH bound to: 12 - type: integer 
-	Parameter G_AXI_ARQOS_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 62 - type: integer 
 	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARREGION_INDEX bound to: 69 - type: integer 
-	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARUSER_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_ARREGION_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 66 - type: integer 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_WDATA_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_WSTRB_INDEX bound to: 32 - type: integer 
@@ -332,10 +332,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_WLAST_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WLAST_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_WID_INDEX bound to: 37 - type: integer 
-	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WUSER_INDEX bound to: 37 - type: integer 
+	Parameter G_AXI_WID_WIDTH bound to: 12 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 49 - type: integer 
 	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 37 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 49 - type: integer 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
@@ -356,21 +356,21 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (11#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
-	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 1 - type: integer 
+	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_AWPAYLOAD_WIDTH bound to: 73 - type: integer 
-	Parameter C_WPAYLOAD_WIDTH bound to: 37 - type: integer 
+	Parameter C_AWPAYLOAD_WIDTH bound to: 66 - type: integer 
+	Parameter C_WPAYLOAD_WIDTH bound to: 49 - type: integer 
 	Parameter C_BPAYLOAD_WIDTH bound to: 14 - type: integer 
-	Parameter C_ARPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter C_ARPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter C_RPAYLOAD_WIDTH bound to: 47 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_AWADDR_WIDTH bound to: 32 - type: integer 
@@ -383,18 +383,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_AWCACHE_INDEX bound to: 40 - type: integer 
 	Parameter G_AXI_AWCACHE_WIDTH bound to: 4 - type: integer 
 	Parameter G_AXI_AWLEN_INDEX bound to: 44 - type: integer 
-	Parameter G_AXI_AWLEN_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_AWLOCK_INDEX bound to: 52 - type: integer 
-	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
-	Parameter G_AXI_AWID_INDEX bound to: 53 - type: integer 
+	Parameter G_AXI_AWLEN_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWLOCK_INDEX bound to: 48 - type: integer 
+	Parameter G_AXI_AWLOCK_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_AWID_INDEX bound to: 50 - type: integer 
 	Parameter G_AXI_AWID_WIDTH bound to: 12 - type: integer 
-	Parameter G_AXI_AWQOS_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 62 - type: integer 
 	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWREGION_INDEX bound to: 69 - type: integer 
-	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWUSER_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_AWREGION_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 66 - type: integer 
 	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_ARADDR_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_ARPROT_INDEX bound to: 32 - type: integer 
@@ -406,18 +406,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_ARCACHE_INDEX bound to: 40 - type: integer 
 	Parameter G_AXI_ARCACHE_WIDTH bound to: 4 - type: integer 
 	Parameter G_AXI_ARLEN_INDEX bound to: 44 - type: integer 
-	Parameter G_AXI_ARLEN_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_ARLOCK_INDEX bound to: 52 - type: integer 
-	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
-	Parameter G_AXI_ARID_INDEX bound to: 53 - type: integer 
+	Parameter G_AXI_ARLEN_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARLOCK_INDEX bound to: 48 - type: integer 
+	Parameter G_AXI_ARLOCK_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_ARID_INDEX bound to: 50 - type: integer 
 	Parameter G_AXI_ARID_WIDTH bound to: 12 - type: integer 
-	Parameter G_AXI_ARQOS_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 62 - type: integer 
 	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARREGION_INDEX bound to: 69 - type: integer 
-	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARUSER_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_ARREGION_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 66 - type: integer 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 66 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_WDATA_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_WSTRB_INDEX bound to: 32 - type: integer 
@@ -425,10 +425,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_WLAST_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WLAST_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_WID_INDEX bound to: 37 - type: integer 
-	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WUSER_INDEX bound to: 37 - type: integer 
+	Parameter G_AXI_WID_WIDTH bound to: 12 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 49 - type: integer 
 	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 37 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 49 - type: integer 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
@@ -450,12 +450,12 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (12#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_register_slice' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
-	Parameter C_DATA_WIDTH bound to: 73 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 66 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_register_slice' (13#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_register_slice__parameterized0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
-	Parameter C_DATA_WIDTH bound to: 37 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 49 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_22_axic_register_slice__parameterized0' (13#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_22_axic_register_slice__parameterized1' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
@@ -796,18 +796,18 @@ INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_22_b2
 INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_22_axi_protocol_converter' (16#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (17#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/synth/design_1_auto_pc_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1389.355 ; gain = 203.512
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1388.039 ; gain = 199.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1389.355 ; gain = 203.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.039 ; gain = 199.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1389.355 ; gain = 203.512
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1388.039 ; gain = 199.312
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1389.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1388.039 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -818,27 +818,27 @@ Parsing XDC File [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/desi
 Finished Parsing XDC File [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_auto_pc_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1488.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1408.051 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1489.184 ; gain = 0.477
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1419.363 ; gain = 11.312
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1419.363 ; gain = 230.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1419.363 ; gain = 230.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_auto_pc_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1419.363 ; gain = 230.637
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm'
@@ -861,7 +861,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1419.363 ; gain = 230.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -875,7 +875,7 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit       Adders := 4     
 	   2 Input    2 Bit       Adders := 2     
 +---Registers : 
-	               73 Bit    Registers := 4     
+	               66 Bit    Registers := 4     
 	               47 Bit    Registers := 2     
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
@@ -886,7 +886,7 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 7     
 	                1 Bit    Registers := 28    
 +---Muxes : 
-	   2 Input   73 Bit        Muxes := 4     
+	   2 Input   66 Bit        Muxes := 4     
 	   2 Input   47 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 8     
 	   2 Input   14 Bit        Muxes := 2     
@@ -913,25 +913,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1419.363 ; gain = 230.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1419.363 ; gain = 230.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1450.645 ; gain = 261.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -949,37 +949,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1016,40 +1016,40 @@ Report Cell Usage:
 +------+--------+------+
 |1     |CARRY4  |    18|
 |2     |LUT1    |     5|
-|3     |LUT2    |    17|
-|4     |LUT3    |   247|
-|5     |LUT4    |    40|
-|6     |LUT5    |    70|
-|7     |LUT6    |   117|
-|8     |SRL16E  |    22|
+|3     |LUT2    |    19|
+|4     |LUT3    |   236|
+|5     |LUT4    |    43|
+|6     |LUT5    |    53|
+|7     |LUT6    |   130|
+|8     |SRL16E  |    18|
 |9     |SRLC32E |    47|
-|10    |FDRE    |   568|
+|10    |FDRE    |   546|
 |11    |FDSE    |    16|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:01:02 . Memory (MB): peak = 1489.184 ; gain = 203.512
-Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1489.184 ; gain = 303.340
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 1454.438 ; gain = 234.387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1454.438 ; gain = 265.711
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1489.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1463.125 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1489.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1463.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 80 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 1489.184 ; gain = 303.340
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1463.125 ; gain = 274.398
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_auto_pc_0_synth_1/design_1_auto_pc_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_auto_pc_0, cache-ID = e20d0efd4067aacd
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_auto_pc_0, cache-ID = 2de26fde42d39102
 INFO: [Coretcl 2-1174] Renamed 23 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_auto_pc_0_synth_1/design_1_auto_pc_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_auto_pc_0_utilization_synth.rpt -pb design_1_auto_pc_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 16 23:27:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 18 20:52:51 2025...
