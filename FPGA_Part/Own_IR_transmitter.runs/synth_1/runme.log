@@ -13,6 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.719 ; gain = 0.000
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,60 +21,116 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12632
+INFO: [Synth 8-7075] Helper process launched with PID 14816
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1235.945 ; gain = 50.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1242.148 ; gain = 56.430
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_0_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_IR_transmission_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_0_0' (1#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_IR_transmission_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (2#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (3#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:364]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:921]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (4#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:921]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:1053]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (5#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:1053]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:1185]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (6#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (7#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:1185]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (8#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:880]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:880]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:880]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (9#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:364]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (10#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:291]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:291]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:291]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_125M_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_rst_ps7_0_125M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_125M_0' (11#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-19364-Azat/realtime/design_1_rst_ps7_0_125M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:355]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:355]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:355]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:355]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_125M' of module 'design_1_rst_ps7_0_125M_0' has 10 connections declared, but only 6 given [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:355]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (12#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (13#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_0_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_0_0' (1#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_0_1' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_0_1' (2#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_1_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_1_0' (3#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_0' (4#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_1' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_1' (5#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_2' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_2' (6#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_3' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_3' (7#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_4' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_4' (8#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_5' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_5' (9#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_2_6' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_2_6' (10#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_IR_transmission_2_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (11#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (12#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_9_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_9_0' (13#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (14#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (15#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_3' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_3' (16#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_4_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_4_0' (17#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_4_1' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_4_1' (18#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_4_2' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_4_2' (19#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_4_3' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_4_3' (20#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_4_4' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_4_4' (21#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_axi_gpio_4_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:987]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2732]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (22#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2732]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (23#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2864]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1BOGR4T' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2996]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1BOGR4T' (24#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2996]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_J0G1J0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3128]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_J0G1J0' (25#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3128]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_19YU2FS' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3260]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_19YU2FS' (26#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3260]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_KSVY9L' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3392]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_KSVY9L' (27#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3392]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_18J6S0R' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3524]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_18J6S0R' (28#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3524]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_LYVHKQ' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3656]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_LYVHKQ' (29#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3656]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1FF5BKI' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3788]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1FF5BKI' (30#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3788]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_NV1J5F' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3920]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_NV1J5F' (31#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:3920]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_XTG13A' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:4052]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_XTG13A' (32#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:4052]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:4184]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (33#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (34#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:4184]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (35#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2691]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2691]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:2691]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (36#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:987]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (37#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:901]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:901]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:901]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_125M_0' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_rst_ps7_0_125M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_125M_0' (38#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_rst_ps7_0_125M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:965]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:965]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:965]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_125M_0' is unconnected for instance 'rst_ps7_0_125M' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:965]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_125M' of module 'design_1_rst_ps7_0_125M_0' has 10 connections declared, but only 6 given [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:965]
+INFO: [Synth 8-6157] synthesizing module 'design_1_transmitt_parallel_0_1' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_transmitt_parallel_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_transmitt_parallel_0_1' (39#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/.Xil/Vivado-11968-Azat/realtime/design_1_transmitt_parallel_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (40#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (41#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1291.703 ; gain = 105.758
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1302.168 ; gain = 116.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1291.703 ; gain = 105.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1302.168 ; gain = 116.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1291.703 ; gain = 105.758
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1302.168 ; gain = 116.449
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1291.703 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1302.168 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -88,10 +145,48 @@ Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sourc
 Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_125M_0/design_1_rst_ps7_0_125M_0/design_1_rst_ps7_0_125M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_125M'
 Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
 Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
-Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0_in_context.xdc] for cell 'design_1_i/IR_transmission_0'
-Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0_in_context.xdc] for cell 'design_1_i/IR_transmission_0'
 Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
 Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_transmitt_parallel_0_1/design_1_transmitt_parallel_0_1/design_1_transmitt_parallel_0_1_in_context.xdc] for cell 'design_1_i/transmitt_parallel_0'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_transmitt_parallel_0_1/design_1_transmitt_parallel_0_1/design_1_transmitt_parallel_0_1_in_context.xdc] for cell 'design_1_i/transmitt_parallel_0'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_2'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_2'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_3'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_3'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_4'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_4'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_5'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_5'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_6'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_6'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_2/design_1_axi_gpio_4_2/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_7'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_2/design_1_axi_gpio_4_2/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_7'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_3/design_1_axi_gpio_4_3/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_8'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_3/design_1_axi_gpio_4_3/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_8'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_4/design_1_axi_gpio_4_4/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_9'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_4/design_1_axi_gpio_4_4/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_9'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_10'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_10'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0_in_context.xdc] for cell 'design_1_i/IR_transmission_0'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0_in_context.xdc] for cell 'design_1_i/IR_transmission_0'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1_in_context.xdc] for cell 'design_1_i/IR_transmission_1'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1_in_context.xdc] for cell 'design_1_i/IR_transmission_1'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_1_0/design_1_IR_transmission_1_0/design_1_IR_transmission_1_0_in_context.xdc] for cell 'design_1_i/IR_transmission_2'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_1_0/design_1_IR_transmission_1_0/design_1_IR_transmission_1_0_in_context.xdc] for cell 'design_1_i/IR_transmission_2'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_0/design_1_IR_transmission_2_0/design_1_IR_transmission_2_0_in_context.xdc] for cell 'design_1_i/IR_transmission_3'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_0/design_1_IR_transmission_2_0/design_1_IR_transmission_2_0_in_context.xdc] for cell 'design_1_i/IR_transmission_3'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_1/design_1_IR_transmission_2_1/design_1_IR_transmission_2_1_in_context.xdc] for cell 'design_1_i/IR_transmission_4'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_1/design_1_IR_transmission_2_1/design_1_IR_transmission_2_1_in_context.xdc] for cell 'design_1_i/IR_transmission_4'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_2/design_1_IR_transmission_2_2/design_1_IR_transmission_2_2_in_context.xdc] for cell 'design_1_i/IR_transmission_5'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_2/design_1_IR_transmission_2_2/design_1_IR_transmission_2_2_in_context.xdc] for cell 'design_1_i/IR_transmission_5'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_3/design_1_IR_transmission_2_3/design_1_IR_transmission_2_3_in_context.xdc] for cell 'design_1_i/IR_transmission_6'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_3/design_1_IR_transmission_2_3/design_1_IR_transmission_2_3_in_context.xdc] for cell 'design_1_i/IR_transmission_6'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_4/design_1_IR_transmission_2_4/design_1_IR_transmission_2_4_in_context.xdc] for cell 'design_1_i/IR_transmission_7'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_4/design_1_IR_transmission_2_4/design_1_IR_transmission_2_4_in_context.xdc] for cell 'design_1_i/IR_transmission_7'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_5/design_1_IR_transmission_2_5/design_1_IR_transmission_2_5_in_context.xdc] for cell 'design_1_i/IR_transmission_8'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_5/design_1_IR_transmission_2_5/design_1_IR_transmission_2_5_in_context.xdc] for cell 'design_1_i/IR_transmission_8'
+Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_6/design_1_IR_transmission_2_6/design_1_IR_transmission_2_6_in_context.xdc] for cell 'design_1_i/IR_transmission_9'
+Finished Parsing XDC File [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_2_6/design_1_IR_transmission_2_6/design_1_IR_transmission_2_6_in_context.xdc] for cell 'design_1_i/IR_transmission_9'
 Parsing XDC File [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc]
 Finished Parsing XDC File [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/constrs_1/new/constrains.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -100,22 +195,31 @@ Parsing XDC File [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synt
 Finished Parsing XDC File [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.320 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1340.723 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1325.320 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1340.723 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_10' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_2' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_3' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_4' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_5' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_6' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_7' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_8' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_9' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.262 ; gain = 142.316
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1344.703 ; gain = 158.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.262 ; gain = 142.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1344.703 ; gain = 158.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -387,13 +491,32 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s00
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_125M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/transmitt_parallel_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_9. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/IR_transmission_9. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.262 ; gain = 142.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1344.703 ; gain = 158.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.262 ; gain = 142.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1344.703 ; gain = 158.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -415,25 +538,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1328.262 ; gain = 142.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1344.703 ; gain = 158.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1382.867 ; gain = 196.922
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1386.078 ; gain = 200.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1383.164 ; gain = 197.219
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1386.746 ; gain = 201.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1402.293 ; gain = 216.348
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1406.391 ; gain = 220.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -451,37 +574,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -494,43 +617,68 @@ Report BlackBoxes:
 |1     |design_1_xbar_0                 |         1|
 |2     |design_1_auto_pc_0              |         1|
 |3     |design_1_IR_transmission_0_0    |         1|
-|4     |design_1_axi_gpio_0_0           |         1|
-|5     |design_1_axi_gpio_1_0           |         1|
-|6     |design_1_processing_system7_0_0 |         1|
-|7     |design_1_rst_ps7_0_125M_0       |         1|
+|4     |design_1_IR_transmission_0_1    |         1|
+|5     |design_1_IR_transmission_1_0    |         1|
+|6     |design_1_IR_transmission_2_0    |         1|
+|7     |design_1_IR_transmission_2_1    |         1|
+|8     |design_1_IR_transmission_2_2    |         1|
+|9     |design_1_IR_transmission_2_3    |         1|
+|10    |design_1_IR_transmission_2_4    |         1|
+|11    |design_1_IR_transmission_2_5    |         1|
+|12    |design_1_IR_transmission_2_6    |         1|
+|13    |design_1_axi_gpio_0_0           |         1|
+|14    |design_1_axi_gpio_1_0           |         1|
+|15    |design_1_axi_gpio_9_0           |         1|
+|16    |design_1_axi_gpio_0_1           |         1|
+|17    |design_1_axi_gpio_0_2           |         1|
+|18    |design_1_axi_gpio_0_3           |         1|
+|19    |design_1_axi_gpio_4_0           |         1|
+|20    |design_1_axi_gpio_4_1           |         1|
+|21    |design_1_axi_gpio_4_2           |         1|
+|22    |design_1_axi_gpio_4_3           |         1|
+|23    |design_1_axi_gpio_4_4           |         1|
+|24    |design_1_processing_system7_0_0 |         1|
+|25    |design_1_rst_ps7_0_125M_0       |         1|
+|26    |design_1_transmitt_parallel_0_1 |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
 +------+------------------------------+------+
 |      |Cell                          |Count |
 +------+------------------------------+------+
-|1     |design_1_IR_transmission_0    |     1|
-|2     |design_1_auto_pc              |     1|
-|3     |design_1_axi_gpio_0           |     1|
-|4     |design_1_axi_gpio_1           |     1|
-|5     |design_1_processing_system7_0 |     1|
-|6     |design_1_rst_ps7_0_125M       |     1|
-|7     |design_1_xbar                 |     1|
-|8     |OBUF                          |     1|
+|1     |design_1_IR_transmission_0    |     2|
+|3     |design_1_IR_transmission_1    |     1|
+|4     |design_1_IR_transmission_2    |     7|
+|11    |design_1_auto_pc              |     1|
+|12    |design_1_axi_gpio_0           |     4|
+|16    |design_1_axi_gpio_1           |     1|
+|17    |design_1_axi_gpio_4           |     5|
+|22    |design_1_axi_gpio_9           |     1|
+|23    |design_1_processing_system7_0 |     1|
+|24    |design_1_rst_ps7_0_125M       |     1|
+|25    |design_1_transmitt_parallel_0 |     1|
+|26    |design_1_xbar                 |     1|
+|27    |IBUF                          |     1|
+|28    |OBUF                          |    10|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1408.066 ; gain = 185.562
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1408.066 ; gain = 222.121
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1411.230 ; gain = 182.977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.230 ; gain = 225.512
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1421.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1424.250 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1427.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1427.918 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+98 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1427.824 ; gain = 241.879
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1427.918 ; gain = 242.199
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 18 20:53:27 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 19 19:14:02 2025...

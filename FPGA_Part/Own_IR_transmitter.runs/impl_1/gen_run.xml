@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1755521506">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1755602002">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -84,6 +84,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/transmitt_parallel.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -134,9 +141,18 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_6"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_4"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_transmitt_parallel_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IR_transmission_2_1"/>
 </GenRun>

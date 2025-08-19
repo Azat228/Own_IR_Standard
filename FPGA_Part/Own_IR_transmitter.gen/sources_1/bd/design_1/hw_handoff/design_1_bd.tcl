@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# IR_transmission
+# IR_transmission, IR_transmission, IR_transmission, IR_transmission, IR_transmission, IR_transmission, IR_transmission, IR_transmission, IR_transmission, IR_transmission, transmitt_parallel
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -169,7 +169,9 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set ir_out_0 [ create_bd_port -dir O ir_out_0 ]
+  set clk_ask_0 [ create_bd_port -dir I clk_ask_0 ]
+  set clk_ask_1 [ create_bd_port -dir I clk_ask_1 ]
+  set ir_parallel_0 [ create_bd_port -dir O -from 9 -to 0 ir_parallel_0 ]
 
   # Create instance: IR_transmission_0, and set properties
   set block_name IR_transmission
@@ -178,6 +180,105 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $IR_transmission_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_1, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_1
+  if { [catch {set IR_transmission_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_1 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_2, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_2
+  if { [catch {set IR_transmission_2 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_2 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_3, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_3
+  if { [catch {set IR_transmission_3 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_3 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_4, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_4
+  if { [catch {set IR_transmission_4 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_4 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_5, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_5
+  if { [catch {set IR_transmission_5 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_5 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_6, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_6
+  if { [catch {set IR_transmission_6 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_6 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_7, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_7
+  if { [catch {set IR_transmission_7 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_7 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_8, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_8
+  if { [catch {set IR_transmission_8 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_8 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: IR_transmission_9, and set properties
+  set block_name IR_transmission
+  set block_cell_name IR_transmission_9
+  if { [catch {set IR_transmission_9 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $IR_transmission_9 eq "" } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -199,8 +300,101 @@ proc create_root_design { parentCell } {
    CONFIG.C_GPIO_WIDTH {1} \
  ] $axi_gpio_1
 
+  # Create instance: axi_gpio_2, and set properties
+  set axi_gpio_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_2 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_2
+
+  # Create instance: axi_gpio_3, and set properties
+  set axi_gpio_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_3 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_3
+
+  # Create instance: axi_gpio_4, and set properties
+  set axi_gpio_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_4 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_4
+
+  # Create instance: axi_gpio_5, and set properties
+  set axi_gpio_5 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_5 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_5
+
+  # Create instance: axi_gpio_6, and set properties
+  set axi_gpio_6 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_6 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_6
+
+  # Create instance: axi_gpio_7, and set properties
+  set axi_gpio_7 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_7 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_7
+
+  # Create instance: axi_gpio_8, and set properties
+  set axi_gpio_8 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_8 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_8
+
+  # Create instance: axi_gpio_9, and set properties
+  set axi_gpio_9 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_9 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_9
+
+  # Create instance: axi_gpio_10, and set properties
+  set axi_gpio_10 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_10 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {5} \
+   CONFIG.C_GPIO_WIDTH {5} \
+   CONFIG.C_IS_DUAL {1} \
+ ] $axi_gpio_10
+
   # Create instance: axi_interconnect_0, and set properties
   set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
+  set_property -dict [ list \
+   CONFIG.NUM_MI {11} \
+ ] $axi_interconnect_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -1005,25 +1199,83 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_125M, and set properties
   set rst_ps7_0_125M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_125M ]
 
+  # Create instance: transmitt_parallel_0, and set properties
+  set block_name transmitt_parallel
+  set block_cell_name transmitt_parallel_0
+  if { [catch {set transmitt_parallel_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $transmitt_parallel_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create interface connections
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins axi_interconnect_0/M00_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_gpio_1/S_AXI] [get_bd_intf_pins axi_interconnect_0/M01_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M02_AXI [get_bd_intf_pins axi_gpio_2/S_AXI] [get_bd_intf_pins axi_interconnect_0/M02_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M03_AXI [get_bd_intf_pins axi_gpio_3/S_AXI] [get_bd_intf_pins axi_interconnect_0/M03_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M04_AXI [get_bd_intf_pins axi_gpio_4/S_AXI] [get_bd_intf_pins axi_interconnect_0/M04_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M05_AXI [get_bd_intf_pins axi_gpio_5/S_AXI] [get_bd_intf_pins axi_interconnect_0/M05_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M06_AXI [get_bd_intf_pins axi_gpio_6/S_AXI] [get_bd_intf_pins axi_interconnect_0/M06_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M07_AXI [get_bd_intf_pins axi_gpio_7/S_AXI] [get_bd_intf_pins axi_interconnect_0/M07_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M08_AXI [get_bd_intf_pins axi_gpio_8/S_AXI] [get_bd_intf_pins axi_interconnect_0/M08_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M09_AXI [get_bd_intf_pins axi_gpio_9/S_AXI] [get_bd_intf_pins axi_interconnect_0/M09_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M10_AXI [get_bd_intf_pins axi_gpio_10/S_AXI] [get_bd_intf_pins axi_interconnect_0/M10_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
-  connect_bd_net -net IR_transmission_0_ir_out [get_bd_ports ir_out_0] [get_bd_pins IR_transmission_0/ir_out]
+  connect_bd_net -net IR_transmission_0_ir_out [get_bd_pins IR_transmission_0/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_0]
+  connect_bd_net -net IR_transmission_1_ir_out [get_bd_pins IR_transmission_1/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_1]
+  connect_bd_net -net IR_transmission_2_ir_out [get_bd_pins IR_transmission_2/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_2]
+  connect_bd_net -net IR_transmission_3_ir_out [get_bd_pins IR_transmission_3/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_3]
+  connect_bd_net -net IR_transmission_4_ir_out [get_bd_pins IR_transmission_4/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_4]
+  connect_bd_net -net IR_transmission_5_ir_out [get_bd_pins IR_transmission_5/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_5]
+  connect_bd_net -net IR_transmission_6_ir_out [get_bd_pins IR_transmission_6/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_6]
+  connect_bd_net -net IR_transmission_7_ir_out [get_bd_pins IR_transmission_7/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_7]
+  connect_bd_net -net IR_transmission_8_ir_out [get_bd_pins IR_transmission_8/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_8]
+  connect_bd_net -net IR_transmission_9_ir_out [get_bd_pins IR_transmission_9/ir_out] [get_bd_pins transmitt_parallel_0/ir_send_9]
   connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins IR_transmission_0/code] [get_bd_pins axi_gpio_0/gpio2_io_o]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins IR_transmission_0/addr] [get_bd_pins axi_gpio_0/gpio_io_o]
-  connect_bd_net -net axi_gpio_1_gpio_io_o [get_bd_pins IR_transmission_0/send] [get_bd_pins axi_gpio_1/gpio_io_o]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins IR_transmission_0/clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_125M/slowest_sync_clk]
+  connect_bd_net -net axi_gpio_10_gpio2_io_o [get_bd_pins IR_transmission_9/code] [get_bd_pins axi_gpio_10/gpio2_io_o]
+  connect_bd_net -net axi_gpio_10_gpio_io_o [get_bd_pins IR_transmission_9/addr] [get_bd_pins axi_gpio_10/gpio_io_o]
+  connect_bd_net -net axi_gpio_1_gpio_io_o [get_bd_pins IR_transmission_0/send] [get_bd_pins IR_transmission_1/send] [get_bd_pins IR_transmission_2/send] [get_bd_pins IR_transmission_3/send] [get_bd_pins IR_transmission_4/send] [get_bd_pins IR_transmission_5/send] [get_bd_pins IR_transmission_6/send] [get_bd_pins IR_transmission_7/send] [get_bd_pins IR_transmission_8/send] [get_bd_pins IR_transmission_9/send] [get_bd_pins axi_gpio_1/gpio_io_o]
+  connect_bd_net -net axi_gpio_2_gpio2_io_o [get_bd_pins IR_transmission_1/addr] [get_bd_pins axi_gpio_2/gpio2_io_o]
+  connect_bd_net -net axi_gpio_2_gpio_io_o [get_bd_pins IR_transmission_1/code] [get_bd_pins axi_gpio_2/gpio_io_o]
+  connect_bd_net -net axi_gpio_3_gpio2_io_o [get_bd_pins IR_transmission_2/addr] [get_bd_pins axi_gpio_3/gpio2_io_o]
+  connect_bd_net -net axi_gpio_3_gpio_io_o [get_bd_pins IR_transmission_2/code] [get_bd_pins axi_gpio_3/gpio_io_o]
+  connect_bd_net -net axi_gpio_4_gpio2_io_o [get_bd_pins IR_transmission_3/addr] [get_bd_pins axi_gpio_4/gpio2_io_o]
+  connect_bd_net -net axi_gpio_4_gpio_io_o [get_bd_pins IR_transmission_3/code] [get_bd_pins axi_gpio_4/gpio_io_o]
+  connect_bd_net -net axi_gpio_5_gpio2_io_o [get_bd_pins IR_transmission_4/code] [get_bd_pins axi_gpio_5/gpio2_io_o]
+  connect_bd_net -net axi_gpio_5_gpio_io_o [get_bd_pins IR_transmission_4/addr] [get_bd_pins axi_gpio_5/gpio_io_o]
+  connect_bd_net -net axi_gpio_6_gpio2_io_o [get_bd_pins IR_transmission_5/code] [get_bd_pins axi_gpio_6/gpio2_io_o]
+  connect_bd_net -net axi_gpio_6_gpio_io_o [get_bd_pins IR_transmission_5/addr] [get_bd_pins axi_gpio_6/gpio_io_o]
+  connect_bd_net -net axi_gpio_7_gpio2_io_o [get_bd_pins IR_transmission_6/code] [get_bd_pins axi_gpio_7/gpio2_io_o]
+  connect_bd_net -net axi_gpio_7_gpio_io_o [get_bd_pins IR_transmission_6/addr] [get_bd_pins axi_gpio_7/gpio_io_o]
+  connect_bd_net -net axi_gpio_8_gpio2_io_o [get_bd_pins IR_transmission_7/code] [get_bd_pins axi_gpio_8/gpio2_io_o]
+  connect_bd_net -net axi_gpio_8_gpio_io_o [get_bd_pins IR_transmission_7/addr] [get_bd_pins axi_gpio_8/gpio_io_o]
+  connect_bd_net -net axi_gpio_9_gpio2_io_o [get_bd_pins IR_transmission_8/code] [get_bd_pins axi_gpio_9/gpio2_io_o]
+  connect_bd_net -net axi_gpio_9_gpio_io_o [get_bd_pins IR_transmission_8/addr] [get_bd_pins axi_gpio_9/gpio_io_o]
+  connect_bd_net -net clk_ask_1_1 [get_bd_ports clk_ask_1] [get_bd_pins transmitt_parallel_0/clk_ask]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins IR_transmission_0/clk] [get_bd_pins IR_transmission_1/clk] [get_bd_pins IR_transmission_2/clk] [get_bd_pins IR_transmission_3/clk] [get_bd_pins IR_transmission_4/clk] [get_bd_pins IR_transmission_5/clk] [get_bd_pins IR_transmission_6/clk] [get_bd_pins IR_transmission_7/clk] [get_bd_pins IR_transmission_8/clk] [get_bd_pins IR_transmission_9/clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_gpio_10/s_axi_aclk] [get_bd_pins axi_gpio_2/s_axi_aclk] [get_bd_pins axi_gpio_3/s_axi_aclk] [get_bd_pins axi_gpio_4/s_axi_aclk] [get_bd_pins axi_gpio_5/s_axi_aclk] [get_bd_pins axi_gpio_6/s_axi_aclk] [get_bd_pins axi_gpio_7/s_axi_aclk] [get_bd_pins axi_gpio_8/s_axi_aclk] [get_bd_pins axi_gpio_9/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/M05_ACLK] [get_bd_pins axi_interconnect_0/M06_ACLK] [get_bd_pins axi_interconnect_0/M07_ACLK] [get_bd_pins axi_interconnect_0/M08_ACLK] [get_bd_pins axi_interconnect_0/M09_ACLK] [get_bd_pins axi_interconnect_0/M10_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_125M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_125M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_125M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins rst_ps7_0_125M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_125M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_gpio_10/s_axi_aresetn] [get_bd_pins axi_gpio_2/s_axi_aresetn] [get_bd_pins axi_gpio_3/s_axi_aresetn] [get_bd_pins axi_gpio_4/s_axi_aresetn] [get_bd_pins axi_gpio_5/s_axi_aresetn] [get_bd_pins axi_gpio_6/s_axi_aresetn] [get_bd_pins axi_gpio_7/s_axi_aresetn] [get_bd_pins axi_gpio_8/s_axi_aresetn] [get_bd_pins axi_gpio_9/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/M04_ARESETN] [get_bd_pins axi_interconnect_0/M05_ARESETN] [get_bd_pins axi_interconnect_0/M06_ARESETN] [get_bd_pins axi_interconnect_0/M07_ARESETN] [get_bd_pins axi_interconnect_0/M08_ARESETN] [get_bd_pins axi_interconnect_0/M09_ARESETN] [get_bd_pins axi_interconnect_0/M10_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins rst_ps7_0_125M/peripheral_aresetn]
+  connect_bd_net -net transmitt_parallel_0_ir_parallel [get_bd_ports ir_parallel_0] [get_bd_pins transmitt_parallel_0/ir_parallel]
 
   # Create address segments
   assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x412A0000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_10/S_AXI/Reg] -force
   assign_bd_address -offset 0x41210000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_1/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41220000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_2/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41230000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_3/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41240000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_4/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41250000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_5/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41260000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_6/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41270000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_7/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41280000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_8/S_AXI/Reg] -force
+  assign_bd_address -offset 0x41290000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_9/S_AXI/Reg] -force
 
 
   # Restore current instance

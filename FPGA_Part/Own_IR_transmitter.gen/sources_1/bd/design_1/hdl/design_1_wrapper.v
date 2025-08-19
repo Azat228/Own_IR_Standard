@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.2 (win64) Build 3118627 Tue Feb  9 05:14:06 MST 2021
-//Date        : Mon Aug 18 20:51:39 2025
+//Date        : Tue Aug 19 18:52:19 2025
 //Host        : Azat running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,7 +31,9 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    ir_out_0);
+    clk_ask_0,
+    clk_ask_1,
+    ir_parallel_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -53,7 +55,9 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output ir_out_0;
+  input clk_ask_0;
+  input clk_ask_1;
+  output [9:0]ir_parallel_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -76,7 +80,9 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire ir_out_0;
+  wire clk_ask_0;
+  wire clk_ask_1;
+  wire [9:0]ir_parallel_0;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -100,5 +106,7 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .ir_out_0(ir_out_0));
+        .clk_ask_0(clk_ask_0),
+        .clk_ask_1(clk_ask_1),
+        .ir_parallel_0(ir_parallel_0));
 endmodule
