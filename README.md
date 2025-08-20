@@ -1,6 +1,6 @@
 # OWN Standard IR Communication Project
 
-This project demonstrates IR communication using my own protocol(this protocol is very similar to nec) with two components:
+This project demonstrates IR communication using my own protocol(this protocol is very similar to nec) and also concurent usage of FPGA ports to transmitt signals in parallel with two components:
 1. **PYNQ Z2 FPGA** (Processing System - PS and Programmable Logic - PL)
 2. **Arduino Uno (Receiver)**
 
@@ -70,7 +70,8 @@ NEC-standard-IR-communication/<br>
    - Receive the IR signals via pin 11
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
 ## Something about my own standard
-My standard is similar to NEC, but it use only 8 bit for transmitting the code only and also the timing in nec is 10 times faster   
+My standard is similar to NEC, but it use only 10 bit for transmitting the code, 5 bit for address and 5 bit for command<br>
+In addition I have implemented parallel transmittion of the IR communication, now 10 transmitters works concurently 
 
 ## 🔧 Troubleshooting
 | Issue | Solution |
