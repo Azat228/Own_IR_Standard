@@ -21,7 +21,7 @@
 
 
 module transmitt_parallel(
-    input clk_ask,
+    input clk,
     input wire ir_send_0,
     input wire ir_send_1,
     input wire ir_send_2,
@@ -34,7 +34,7 @@ module transmitt_parallel(
     input wire ir_send_9,
     output reg[9:0] ir_parallel
 );
-always @(posedge clk_ask) begin
+always @(posedge clk) begin
     ir_parallel[0] <= ir_send_0;
     ir_parallel[1] <= ir_send_1;
     ir_parallel[2] <= ir_send_2;

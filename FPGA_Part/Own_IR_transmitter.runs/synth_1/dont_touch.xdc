@@ -12,6 +12,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_pr
 # IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_axi_interconnect_0_0/design_1_axi_interconnect_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_0_0 || ORIG_REF_NAME==design_1_axi_interconnect_0_0} -quiet] -quiet
 
@@ -24,67 +27,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_1_0 || ORIG_REF_NAME==design_1_axi_gpio_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_IR_transmission_0_0/design_1_IR_transmission_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_0_0 || ORIG_REF_NAME==design_1_IR_transmission_0_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_1 || ORIG_REF_NAME==design_1_axi_gpio_0_1} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_0_1 || ORIG_REF_NAME==design_1_IR_transmission_0_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_transmitt_parallel_0_1/design_1_transmitt_parallel_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_transmitt_parallel_0_1 || ORIG_REF_NAME==design_1_transmitt_parallel_0_1} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_IR_transmission_1_0/design_1_IR_transmission_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_1_0 || ORIG_REF_NAME==design_1_IR_transmission_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_IR_transmission_2_0/design_1_IR_transmission_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_0 || ORIG_REF_NAME==design_1_IR_transmission_2_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_IR_transmission_2_1/design_1_IR_transmission_2_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_1 || ORIG_REF_NAME==design_1_IR_transmission_2_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_IR_transmission_2_2/design_1_IR_transmission_2_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_2 || ORIG_REF_NAME==design_1_IR_transmission_2_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_IR_transmission_2_3/design_1_IR_transmission_2_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_3 || ORIG_REF_NAME==design_1_IR_transmission_2_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_IR_transmission_2_4/design_1_IR_transmission_2_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_4 || ORIG_REF_NAME==design_1_IR_transmission_2_4} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_IR_transmission_2_5/design_1_IR_transmission_2_5.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_5 || ORIG_REF_NAME==design_1_IR_transmission_2_5} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_IR_transmission_2_6/design_1_IR_transmission_2_6.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_IR_transmission_2_6 || ORIG_REF_NAME==design_1_IR_transmission_2_6} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_1 || ORIG_REF_NAME==design_1_axi_gpio_0_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_2 || ORIG_REF_NAME==design_1_axi_gpio_0_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_3 || ORIG_REF_NAME==design_1_axi_gpio_0_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_4_0 || ORIG_REF_NAME==design_1_axi_gpio_4_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_4_1 || ORIG_REF_NAME==design_1_axi_gpio_4_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_4_2/design_1_axi_gpio_4_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_4_2 || ORIG_REF_NAME==design_1_axi_gpio_4_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_4_3/design_1_axi_gpio_4_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_4_3 || ORIG_REF_NAME==design_1_axi_gpio_4_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_4_4/design_1_axi_gpio_4_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_4_4 || ORIG_REF_NAME==design_1_axi_gpio_4_4} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_9_0 || ORIG_REF_NAME==design_1_axi_gpio_9_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
-
-# XDC: c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Users/azati/Own_IR_Standard/FPGA_Part/Own_IR_transmitter.gen/sources_1/bd/design_1/design_1_ooc.xdc
