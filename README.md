@@ -24,8 +24,11 @@ This project demonstrates IR communication using my own protocol(this protocol i
 | IR Transmitter | PYNQ Z2 Pin   |
 |----------------|---------------|
 | Data Pin       | AR0           |
-| VCC            | PMOD Pin 5    |
-| GND            | PMOD Pin 4    |
+| VCC            | VCC(last hole)|
+| GND            | GND (near to last hole)|
+<br>
+this picture will help:<br>
+![alt text](image-1.png)
 
 #### Arduino2 (Blue) → IR Receiver
 | IR Receiver | Arduino2 Pin |
@@ -54,7 +57,7 @@ NEC-standard-IR-communication/<br>
 |  └── design_1_wrapper.hwh<br>
 ### Installation Steps
 1. Connect PYNQ Z2 to your computer (micro usb and ethernet cable)
-2. Connect to the server http://192.168.2.99:9090/ 
+2. Connect to the server http://192.168.2.99:9090/, if you are new to this server, server will ask password: it is "xilinx"
 3. Move all files from PS part here(nec_onlyFPGA.ipynb and xilinx/overlays/nec folder, inside this folder add design_1_wrapper.bit,design_1_wrapper.hwh  ), and open nec_onlyFPGA.ipynb file
 
 ### Uploading Arduino Sketches
