@@ -26,9 +26,9 @@ This project demonstrates IR communication using my own protocol(this protocol i
 | Data Pin       | AR0           |
 | VCC            | VCC(last hole)|
 | GND            | GND (near to last hole)|
-<br>
-this picture will help:<br>
-![alt text](image-1.png)
+This picture will help:<br>
+<img width="460" height="273" alt="image" src="https://github.com/user-attachments/assets/3fbf0de6-927d-4913-ab31-040be0119980" />
+
 
 #### Arduino2 (Blue) → IR Receiver
 | IR Receiver | Arduino2 Pin |
