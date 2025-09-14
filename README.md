@@ -75,6 +75,20 @@ NEC-standard-IR-communication/<br>
 ## Something about my own standard
 My standard is similar to NEC, but it use only 10 bit for transmitting the code, 5 bit for address and 5 bit for command<br>
 In addition I have implemented parallel transmittion of the IR communication, now 10 transmitters works concurently 
+## Modifying the Code
+
+If you need to modify the code on the Vivado (PL) side:
+
+1. **Install the PYNQ-Z2 Board Files:**
+   - Download and install the PYNQ-Z2 board files from [this repository](https://github.com/xupsh/pynq-supported-board-file?tab=readme-ov-file) by following the instructions provided there.
+
+2. **Project Structure Overview:**
+   - **PS folder:** Contains code for the PYNQ-Z2 server (Processing System side).
+   - **PL folder:** Contains the IP cores and hardware design files for the project (Programmable Logic side).
+   - **arduino_part:** Includes code for debugging and testing the circuit using Arduino.
+
+Make sure to update the relevant section depending on whether you are working with the FPGA (PL), the PYNQ server (PS), or the Arduino side.
+
 
 ## 🔧 Troubleshooting
 | Issue | Solution |
