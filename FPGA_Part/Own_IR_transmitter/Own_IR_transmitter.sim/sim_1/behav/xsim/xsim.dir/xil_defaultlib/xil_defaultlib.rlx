@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,axi_vip_v1_1_8;processing_system7_vip_v1_0_10;xilinx_vip,,,,,,
+C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/sim_1/new/IR_transmitter_tb.v,1758047115,verilog,,,,IR_transmitter_tb,,axi_vip_v1_1_8;processing_system7_vip_v1_0_10;xilinx_vip,../../../../Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/34f8/hdl;../../../../Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/ec67/hdl;C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include,,,,,
+C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v,1758046681,verilog,,C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/sim_1/new/IR_transmitter_tb.v,,IR_transmission,,axi_vip_v1_1_8;processing_system7_vip_v1_0_10;xilinx_vip,../../../../Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/34f8/hdl;../../../../Own_IR_transmitter.gen/sources_1/bd/design_1/ipshared/ec67/hdl;C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include,,,,,

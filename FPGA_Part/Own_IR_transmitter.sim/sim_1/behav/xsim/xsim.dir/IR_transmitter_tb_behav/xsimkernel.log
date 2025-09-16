@@ -1,7 +1,0 @@
-Running: xsim.dir/IR_transmitter_tb_behav/xsimk.exe -simmode gui -wdb IR_transmitter_tb_behav.wdb -simrunnum 0 -socket 53083
-Design successfully loaded
-Design Loading Memory Usage: 7988 KB (Peak: 7988 KB)
-Design Loading CPU Usage: 187 ms
-Simulation completed
-Simulation Memory Usage: 17008 KB (Peak: 17008 KB)
-Simulation CPU Usage: 13811 ms
