@@ -58,7 +58,7 @@ NEC-standard-IR-communication/<br>
 ### Installation Steps
 1. Connect PYNQ Z2 to your computer (micro usb and ethernet cable)
 2. Connect to the server http://192.168.2.99:9090/, if you are new to this server, server will ask password: it is "xilinx"
-3. Move all files from PS part here(nec_onlyFPGA.ipynb and xilinx/overlays/nec folder, inside this folder add design_1_wrapper.bit,design_1_wrapper.hwh  ), and open nec_onlyFPGA.ipynb file
+3. Move all files from PS part here(nec_onlyFPGA.ipynb into your project folder and design_1_wrapper.bit,design_1_wrapper.hwh into xilinx/overlays/own folder), and run nec_onlyFPGA.ipynb file
 
 ### Uploading Arduino Sketches
 2. **Arduino**:
@@ -68,19 +68,20 @@ NEC-standard-IR-communication/<br>
 ## 🚀 Running the Project
 1. run the nec_onlyFPGA.ipynb file and write the command that you want to send
 2. The FPGA will:
-   - Transmit each code via IR (AR0 pin) with ~100ms interval
+   - Transmit each code via IR (AR0 pin and AR1 pin in parallel) 
 3. Arduino will:
    - Receive the IR signals via pin 11
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
 ## Something about my own standard
 My standard is similar to NEC, but it use only 10 bit for transmitting the code, 5 bit for address and 5 bit for command<br>
-In addition I have implemented parallel transmittion of the IR communication, now 10 transmitters works concurently 
+In addition I have implemented parallel transmittion of the IR communication, now 2 transmitters works concurently 
 ## Modifying the Code
 
 If you need to modify the code on the Vivado (PL) side:
 
 1. **Install the PYNQ-Z2 Board Files:**
    - Download and install the PYNQ-Z2 board files from [this repository](https://github.com/xupsh/pynq-supported-board-file?tab=readme-ov-file) by following the instructions provided there.
+   -Donwload Xilinx Vivado 2020.2 from [this website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)
 
 2. **Project Structure Overview:**
    - **PS folder:** Contains code for the PYNQ-Z2 server (Processing System side).
