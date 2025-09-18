@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Sep 16 20:02:51 2025
+// Date        : Tue Sep 16 20:02:50 2025
 // Host        : Azat running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_auto_pc_0 -prefix
+//               design_1_auto_pc_0_ design_1_auto_pc_0_stub.v
 // Design      : design_1_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

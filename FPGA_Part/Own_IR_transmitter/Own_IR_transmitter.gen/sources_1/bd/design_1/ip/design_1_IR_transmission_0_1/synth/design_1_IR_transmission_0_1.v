@@ -52,7 +52,8 @@
 
 (* X_CORE_INFO = "IR_transmission,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_IR_transmission_0_1,IR_transmission,{}" *)
-(* CORE_GENERATION_INFO = "design_1_IR_transmission_0_1,IR_transmission,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=IR_transmission,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CARRIER_FREQ=38000,CLK_FREQ=125000000,DATA_PULSE=3,DATA_SPACE=4,IDLE=0,RELAX=6,START_PULSE=1,START_SPACE=2,STOP=5}" *)
+(* CORE_GENERATION_INFO = "design_1_IR_transmission_0_1,IR_transmission,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=IR_transmission,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CLK_FREQ=125000000,CARRIER_FREQ=38000,IDLE=0,START_PULSE=1,START_SPACE=2,DATA_PULSE=3,DATA_SPACE=4,STOP=5,RELAX=6}" *)
+(* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_IR_transmission_0_1 (
   clk,
@@ -64,22 +65,22 @@ module design_1_IR_transmission_0_1 (
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
-input wire [0 : 0] clk;
+input wire clk;
 input wire [7 : 0] code;
 input wire [7 : 0] addr;
-input wire [0 : 0] send;
-output wire [0 : 0] ir_out;
+input wire send;
+output wire ir_out;
 
   IR_transmission #(
-    .CARRIER_FREQ("38000"),
-    .CLK_FREQ("125000000"),
-    .DATA_PULSE("3"),
-    .DATA_SPACE("4"),
-    .IDLE("0"),
-    .RELAX("6"),
-    .START_PULSE("1"),
-    .START_SPACE("2"),
-    .STOP("5")
+    .CLK_FREQ(125000000),
+    .CARRIER_FREQ(38000),
+    .IDLE(0),
+    .START_PULSE(1),
+    .START_SPACE(2),
+    .DATA_PULSE(3),
+    .DATA_SPACE(4),
+    .STOP(5),
+    .RELAX(6)
   ) inst (
     .clk(clk),
     .code(code),
