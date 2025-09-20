@@ -1,5 +1,5 @@
 #include <IRremote.hpp>
-#define IR_RECEIVE_PIN 9
+#define IR_RECEIVE_PIN 11
 void setup() {
   Serial.begin(9600);
   IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
