@@ -1,7 +1,7 @@
 module IR_transmission (
     input  clk,
     input  wire[7:0] code,
-    input  wire[7:0] addr,
+    input  wire[3:0] addr,
     input  send,
     output reg ir_out
 );
@@ -23,7 +23,7 @@ module IR_transmission (
     parameter IDLE = 0, START_PULSE = 1, START_SPACE = 2, DATA_PULSE = 3, DATA_SPACE = 4, STOP = 5,RELAX = 6;
 
     reg [2:0] state = IDLE;
-    reg [31:0] shift_reg;
+    reg [23:0] shift_reg;
     reg [30:0] counter = 0; // Sufficient width
     reg [5:0] bit_count = 0; // Track 32 bits
 
@@ -87,13 +87,13 @@ module IR_transmission (
             DATA_SPACE: begin
                 pulse_active <= 0;
                 ir_out <= 0;
-                if ((shift_reg[31] && (counter < BIT1_SPACE)) || (!shift_reg[31] && (counter < BIT0_SPACE))) begin
+                if ((shift_reg[23] && (counter < BIT1_SPACE)) || (!shift_reg[23] && (counter < BIT0_SPACE))) begin
                     counter <= counter + 1;
                 end else begin
                     counter <= 0;
                     shift_reg <= shift_reg << 1;
                     bit_count <= bit_count + 1;
-                    if (bit_count == 31) begin
+                    if (bit_count == 23) begin
                         state <= STOP;
                     end else begin
                         state <= DATA_PULSE;
@@ -112,7 +112,7 @@ module IR_transmission (
                 ir_out <= pulse_active ? carrier : 0;
             end
             RELAX:begin
-            pulse_active <= 0;
+            pulse_active <= 0;  
                 if (counter < RELAX_BETWEEN_STATES) begin
                     counter <= counter + 1;
                 end else begin

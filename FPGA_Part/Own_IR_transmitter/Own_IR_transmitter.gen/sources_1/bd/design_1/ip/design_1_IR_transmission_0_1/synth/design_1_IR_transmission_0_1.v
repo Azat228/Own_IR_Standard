@@ -67,7 +67,7 @@ module design_1_IR_transmission_0_1 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire [7 : 0] code;
-input wire [7 : 0] addr;
+input wire [3 : 0] addr;
 input wire send;
 output wire ir_out;
 

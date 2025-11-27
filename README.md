@@ -14,29 +14,41 @@ This project demonstrates IR communication using my own protocol(this protocol i
 
 ### Components Needed
 - PYNQ Z2 FPGA board
-- Arduino Uno board
-- IR receiver (connected to Arduino)
+- Arduino Uno board x2
+- IR receiver x2 (connected to Arduino)
 - Jumper wires
 
 ### 🔌 Connections
 
-#### PYNQ Z2 → IR Transmitter
+#### PYNQ Z2 → IR Transmitter(1)
 | IR Transmitter | PYNQ Z2 Pin   |
 |----------------|---------------|
 | Data Pin       | AR0           |
 | VCC            | VCC(last hole)|
 | GND            | GND (near to last hole)|
+#### PYNQ Z2 → IR Transmitter(2)
+| IR Transmitter | PYNQ Z2 Pin   |
+|----------------|---------------|
+| Data Pin       | AR1           |
+| VCC            | VCC|
+| GND            | GND |
 This picture will help:<br>
 <img width="460" height="273" alt="image" src="https://github.com/user-attachments/assets/3fbf0de6-927d-4913-ab31-040be0119980" />
 
 
-#### Arduino2 (Blue) → IR Receiver
+#### Arduino2 (Blue) → IR Receiver(1)
 | IR Receiver | Arduino2 Pin |
 |-------------|-------------|
 | Data Pin    | Pin 11      |
 | VCC         | 5V          |
 | GND         | GND         |
 
+#### Arduino2 (Blue) → IR Receiver(2)
+| IR Receiver | Arduino2 Pin |
+|-------------|-------------|
+| Data Pin    | Pin 9      |
+| VCC         | 5V          |
+| GND         | GND         |
 
 ![WhatsApp Image 2025-08-15 at 01 45 42](https://github.com/user-attachments/assets/48c9e8f9-4cb0-47bc-8231-4a2c8fab3858)
 
@@ -50,6 +62,7 @@ This picture will help:<br>
 NEC-standard-IR-communication/<br>
 ├── arduino_part/<br>
 │ └── IR_receiver_own.ino (for Arduino)<br>
+  └── IR_receiver_own(1).ino (for Arduino)<br>
 |──PS part<br>
 │ └── nec_onlyFPGA.ipynb<br>
 │ ── xilinx/overlays/nec<br>
@@ -62,18 +75,18 @@ NEC-standard-IR-communication/<br>
 
 ### Uploading Arduino Sketches
 2. **Arduino**:
-   - Open `IR_TransmitterReceiver.ino`
+   - Open `IR_receiver_own.ino`
    - Upload to  Arduino
 
 ## 🚀 Running the Project
-1. run the nec_onlyFPGA.ipynb file and write the command that you want to send
+1. run the nec_onlyFPGA.ipynb file and write the command you want to send, into function in pythin code
 2. The FPGA will:
    - Transmit each code via IR (AR0 pin and AR1 pin in parallel) 
 3. Arduino will:
-   - Receive the IR signals via pin 11
+   - Receive the IR signals via pin 11 and pin 9
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
 ## Something about my own standard
-My standard is similar to NEC, but it use only 10 bit for transmitting the code, 5 bit for address and 5 bit for command<br>
+My standard is similar to NEC, but it use only 14 bit for transmitting the code, 4 bit for address and 8 bit for command<br>
 In addition I have implemented parallel transmittion of the IR communication, now 2 transmitters works concurently 
 ## Modifying the Code
 
