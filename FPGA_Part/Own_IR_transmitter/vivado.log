@@ -200,3 +200,5 @@ INFO: [Labtools 27-2221] Launch Output:
 
 INFO: [Labtools 27-2058] connect_hw_server command cancelled.
 INFO: [Common 17-344] 'connect_hw_server' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 28 15:00:12 2025...
