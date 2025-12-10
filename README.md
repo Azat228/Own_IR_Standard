@@ -16,6 +16,7 @@ This project demonstrates IR communication using my own protocol(this protocol i
 - PYNQ Z2 FPGA board
 - Arduino Uno board
 - IR receiver (connected to Arduino)
+- IR transmitter x2 (connected to FPGA)
 - Jumper wires
 
 ### 🔌 Connections
@@ -38,12 +39,18 @@ This picture will help:<br>
 
 
 #### Arduino2 (Blue) → IR Receiver
-| IR Receiver | Arduino2 Pin |
+| IR Receiver | Arduino1 Pin |
 |-------------|-------------|
 | Data Pin    | Pin 11      |
 | VCC         | 5V          |
 | GND         | GND         |
 
+#### Arduino2 (Blue) → IR Receiver
+| IR Receiver | Arduino2 Pin |
+|-------------|-------------|
+| Data Pin    | Pin 9      |
+| VCC         | 5V          |
+| GND         | GND         |
 
 ![WhatsApp Image 2025-08-15 at 01 45 42](https://github.com/user-attachments/assets/48c9e8f9-4cb0-47bc-8231-4a2c8fab3858)
 
@@ -57,6 +64,7 @@ This picture will help:<br>
 NEC-standard-IR-communication/<br>
 ├── arduino_part/<br>
 │ └── IR_receiver_own.ino (for Arduino)<br>
+|  └── IR_receiver_own1.ino (for Arduino)<br>
 |──PS part<br>
 │ └── nec_onlyFPGA.ipynb<br>
 │ ── xilinx/overlays/nec<br>
@@ -64,9 +72,11 @@ NEC-standard-IR-communication/<br>
 |  └── design_1_wrapper.hwh<br>
 ### Installation Steps
 1. Connect PYNQ Z2 to your computer (micro usb and ethernet cable)
-2. configurate the file IP adress according to this video:https://www.youtube.com/watch?v=mZ8zO3Yy-Fg
-3. Connect to the server http://192.168.2.99:9090/, if you are new to this server, server will ask password: it is "xilinx"
-4. Move all files from PS part here(nec_onlyFPGA.ipynb into your project folder and design_1_wrapper.bit,design_1_wrapper.hwh into xilinx/overlays/own folder), and upload nec_onlyFPGA.ipynb file into Own_IR_Standard run nec_onlyFPGA.ipynb file
+2. configurate the file IP adress according to this video:https://www.youtube.com/watch?v=mZ8zO3Yy-Fg and this tutorial:http://blog.umer-farooq.com/a-pynq-z2-guide-for-absolute-dummies-part-i-fun-with-leds-and-switches-47dd76abf9a9
+3. Here is the image for more reference:
+![alt text](Image_for_more.png)
+4. Connect to the server http://192.168.2.99:9090/, if you are new to this server, server will ask password: it is "xilinx"
+5. Move all files from PS part here(nec_onlyFPGA.ipynb into your project folder and design_1_wrapper.bit,design_1_wrapper.hwh into xilinx/overlays/own folder), and upload nec_onlyFPGA.ipynb file into Own_IR_Standard run nec_onlyFPGA.ipynb file
 
 ### Uploading Arduino Sketches
 2. **Arduino**:
@@ -82,7 +92,7 @@ NEC-standard-IR-communication/<br>
    - Display the decoded values in its Serial Monitor (baud rate: 9600)
 ## Something about my own standard
 My standard is similar to NEC, but it use only 10 bit for transmitting the code, 5 bit for address and 5 bit for command<br>
-In addition I have implemented parallel transmittion of the IR communication, now 2 transmitters works concurently 
+In addition I have implemented parallel transmittion of the IR communication, now 2 transmitters works concurently(still in progress) 
 ## Modifying the Code
 
 If you need to modify the code on the Vivado (PL) side:
