@@ -26,8 +26,15 @@ This project demonstrates IR communication using my own protocol(this protocol i
 | Data Pin       | AR0           |
 | VCC            | VCC(last hole)|
 | GND            | GND (near to last hole)|
+
+| IR Transmitter(2) | PYNQ Z2 Pin   |
+|----------------|---------------|
+| Data Pin       | AR1           |
+| VCC            | VCC(last hole)|
+| GND            | GND (near to last hole)|
+
 This picture will help:<br>
-<img width="460" height="273" alt="image" src="https://github.com/user-attachments/assets/3fbf0de6-927d-4913-ab31-040be0119980" />
+![WhatsApp Image 2025-12-09 at 10 10 41](https://github.com/user-attachments/assets/308e2a79-950a-423c-8b7b-6999aa73beee)
 
 
 #### Arduino2 (Blue) → IR Receiver
@@ -57,8 +64,9 @@ NEC-standard-IR-communication/<br>
 |  └── design_1_wrapper.hwh<br>
 ### Installation Steps
 1. Connect PYNQ Z2 to your computer (micro usb and ethernet cable)
-2. Connect to the server http://192.168.2.99:9090/, if you are new to this server, server will ask password: it is "xilinx"
-3. Move all files from PS part here(nec_onlyFPGA.ipynb into your project folder and design_1_wrapper.bit,design_1_wrapper.hwh into xilinx/overlays/own folder), and run nec_onlyFPGA.ipynb file
+2. configurate the file IP adress according to this video:https://www.youtube.com/watch?v=mZ8zO3Yy-Fg
+3. Connect to the server http://192.168.2.99:9090/, if you are new to this server, server will ask password: it is "xilinx"
+4. Move all files from PS part here(nec_onlyFPGA.ipynb into your project folder and design_1_wrapper.bit,design_1_wrapper.hwh into xilinx/overlays/own folder), and upload nec_onlyFPGA.ipynb file into Own_IR_Standard run nec_onlyFPGA.ipynb file
 
 ### Uploading Arduino Sketches
 2. **Arduino**:
