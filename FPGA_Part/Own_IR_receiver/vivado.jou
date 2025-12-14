@@ -11,3 +11,6 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source nec_ir_receiver_tb.tcl
