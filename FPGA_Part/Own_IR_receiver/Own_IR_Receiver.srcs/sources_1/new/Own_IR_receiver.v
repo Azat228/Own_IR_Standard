@@ -4,25 +4,22 @@ module nec_ir_receiver(
     input        clk,          // 100MHz system clock
     input        rst,          // Active high synchronous reset
     input        ir_in,        // Input from IR receiver (active low)
-    output reg   data_valid,   // High for one clk when new data is available
+    output reg   data_valid,   // High for one clk when new valid data is available
     output reg [7:0] address,  // Decoded address
     output reg [7:0] command   // Decoded command
 );
 
 // Timing constants (in clock cycles, 100MHz clock)
-localparam CLK_FREQ = 100_000_000;
-
-// Use parentheses to ensure correct precedence in calculations
 localparam LEAD_PULSE_MIN  = 810_000;
 localparam LEAD_PULSE_MAX  = 990_000;
-localparam LEAD_SPACE_MIN  = 430_000;   // ~4.5ms, with margin
-localparam LEAD_SPACE_MAX  = 470_000;   // ~4.5ms, with margin
-localparam BIT_PULSE_MIN   = 50580;
-localparam BIT_PULSE_MAX   = 61820; // ~562us, with margin
-localparam BIT_1_SPACE_MIN = 151830; // ~1.687ms, with margin
-localparam BIT_1_SPACE_MAX = 185570; // ~1.687ms, with margin
-localparam BIT_0_SPACE_MIN = 50580; // ~562us, with margin
-localparam BIT_0_SPACE_MAX = 61820; // ~562us, with margin
+localparam LEAD_SPACE_MIN  = 430_000;
+localparam LEAD_SPACE_MAX  = 470_000;
+localparam BIT_PULSE_MIN   = 50_580;
+localparam BIT_PULSE_MAX   = 61_820;
+localparam BIT_1_SPACE_MIN = 151_830;
+localparam BIT_1_SPACE_MAX = 185_570;
+localparam BIT_0_SPACE_MIN = 50_580;
+localparam BIT_0_SPACE_MAX = 61_820;
 
 // State encoding
 localparam IDLE        = 3'd0;
@@ -138,7 +135,12 @@ always @(posedge clk) begin
                 // Extract address and command (LSB first)
                 address <= shift_reg[7:0];
                 command <= shift_reg[23:16];
-                data_valid <= 1'b1;
+                // Protocol check: address and command must match their inverse fields
+                if ((shift_reg[7:0] == ~shift_reg[15:8]) && (shift_reg[23:16] == ~shift_reg[31:24])) begin
+                    data_valid <= 1'b1;
+                end else begin
+                    data_valid <= 1'b0; // Frame error, do not assert data_valid
+                end
                 state <= IDLE;
             end
 

@@ -9,7 +9,6 @@ wire data_valid;
 wire [7:0] address;
 wire [7:0] command;
 
-// Instantiate the DUT
 nec_ir_receiver uut (
     .clk(clk),
     .rst(rst),
@@ -19,31 +18,23 @@ nec_ir_receiver uut (
     .command(command)
 );
 
-// Generate 100 MHz clock
+// 100 MHz clock
 always #5 clk = ~clk;
 
-// Timing constants
-localparam CYCLE_TIME = 10;
-localparam LEAD_PULSE_TIME  = 810_000 * CYCLE_TIME;
-localparam LEAD_SPACE_TIME  = 450_000 * CYCLE_TIME;  
-localparam BIT_PULSE_TIME   = 56_200 * CYCLE_TIME;
-localparam BIT_0_SPACE_TIME = 56_200 * CYCLE_TIME;
-localparam BIT_1_SPACE_TIME = 168_700 * CYCLE_TIME;
-
-// Task to generate a single NEC bit
+// Send one bit (active low pulse)
 task send_bit(input reg value);
     begin
-        ir_in = 1; 
-        #(BIT_PULSE_TIME);
-        ir_in = 0;
+        ir_in = 0; 
+        #562_000;
+        ir_in = 1;
         if (value)
-            #(BIT_1_SPACE_TIME);
+            #1_687_000;
         else  
-            #(BIT_0_SPACE_TIME);
+            #562_000;
     end
 endtask
 
-// Task to send a complete NEC frame (LSB first)
+// Send one NEC frame (LSB first)
 task send_nec_frame(input [7:0] addr, input [7:0] cmd);
     integer i;
     reg [7:0] addr_inv, cmd_inv;
@@ -52,10 +43,10 @@ task send_nec_frame(input [7:0] addr, input [7:0] cmd);
         cmd_inv = ~cmd;
         
         // Leading burst
-        ir_in = 1; 
-        #(LEAD_PULSE_TIME);
         ir_in = 0; 
-        #(LEAD_SPACE_TIME);
+        #8_100_000;
+        ir_in = 1; 
+        #4_500_000;
 
         // Send 32 bits
         for (i = 0; i < 8; i = i + 1) send_bit(addr[i]);
@@ -64,27 +55,25 @@ task send_nec_frame(input [7:0] addr, input [7:0] cmd);
         for (i = 0; i < 8; i = i + 1) send_bit(cmd_inv[i]);
 
         // Stop bit
-        ir_in = 1; 
-        #(BIT_PULSE_TIME);
-        ir_in = 0;
+        ir_in = 0; 
+        #562_000;
+        ir_in = 1;
         
-        #(1_000_000);
+        #1_000_000;
     end
 endtask
 
-// Main test sequence
 initial begin
     clk = 0;
     rst = 1;
-    ir_in = 0;
+    ir_in = 1; // idle
     #100;
-    rst = 1;
+    rst = 0;
     #100;
     
-    send_nec_frame(8'h00, 8'h5A);
+    send_nec_frame(8'hA5, 8'hFF);
     
     #2_000_000;
-    $stop;
 end
 
 endmodule
