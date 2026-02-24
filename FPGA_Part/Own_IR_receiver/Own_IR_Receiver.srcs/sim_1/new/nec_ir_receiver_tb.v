@@ -71,7 +71,7 @@ initial begin
     rst = 0;
     #100;
     
-    send_nec_frame(8'hA5, 8'hFF);
+    send_nec_frame(8'hBF, 8'hC0);
     
     #2_000_000;
 end

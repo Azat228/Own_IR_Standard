@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Thu Sep 18 19:18:28 2025
+// Date        : Sun Feb 22 22:44:30 2026
 // Host        : Azat running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1_sim_netlist.v
+//               c:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_0_1/design_1_IR_transmission_0_1_sim_netlist.v
 // Design      : design_1_IR_transmission_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

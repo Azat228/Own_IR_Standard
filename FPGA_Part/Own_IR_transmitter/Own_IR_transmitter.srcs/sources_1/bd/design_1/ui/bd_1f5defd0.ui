@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-151,26",
+   "Default View_ScaleFactor":"0.947323",
+   "Default View_TopLeft":"439,-72",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -17,24 +17,24 @@ preplace inst processing_system7_0 -pg 1 -lvl 1 -x 220 -y 440 -defaultsOSRD
 preplace inst rst_ps7_0_125M -pg 1 -lvl 1 -x 220 -y 230 -defaultsOSRD
 preplace inst IR_transmission_1 -pg 1 -lvl 4 -x 1210 -y 210 -defaultsOSRD
 preplace inst IR_transmission_2 -pg 1 -lvl 4 -x 1210 -y 540 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 130 410
-preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 1 2 400 50 720
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 130 420
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 1 2 410 50 720
 preplace netloc IR_transmission_1_ir_out 1 4 1 NJ 210
 preplace netloc IR_transmission_2_ir_out 1 4 1 NJ 540
 preplace netloc axi_gpio_1_gpio_io_o 1 3 1 N 220
-preplace netloc axi_gpio_1_gpio2_io_o 1 3 1 1070 200n
-preplace netloc axi_gpio_2_gpio_io_o 1 3 1 1050 490n
+preplace netloc axi_gpio_1_gpio2_io_o 1 3 1 1060 200n
+preplace netloc axi_gpio_2_gpio_io_o 1 3 1 1040 490n
 preplace netloc axi_gpio_2_gpio2_io_o 1 3 1 N 530
-preplace netloc axi_gpio_0_gpio_io_o 1 3 1 1060 90n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 120 420 40 740 320 1080
+preplace netloc axi_gpio_0_gpio_io_o 1 3 1 1050 90n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 120 430 40 740 320 1070
+preplace netloc axi_interconnect_0_M00_AXI 1 2 1 730 60n
+preplace netloc axi_interconnect_0_M02_AXI 1 2 1 730 230n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440 110n
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 410 NJ 410 NJ 410 NJ
 preplace netloc axi_interconnect_0_M01_AXI 1 2 1 N 210
 preplace netloc processing_system7_0_DDR 1 1 4 NJ 390 750J 380 NJ 380 NJ
-preplace netloc axi_interconnect_0_M00_AXI 1 2 1 730 60n
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 410 NJ 410 NJ 410 NJ
-preplace netloc axi_interconnect_0_M02_AXI 1 2 1 730 230n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430 110n
 levelinfo -pg 1 0 220 580 900 1210 1360
-pagesize -pg 1 -db -bbox -sgen 0 0 1510 630
+pagesize -pg 1 -db -bbox -sgen 0 0 1490 630
 "
 }
 {

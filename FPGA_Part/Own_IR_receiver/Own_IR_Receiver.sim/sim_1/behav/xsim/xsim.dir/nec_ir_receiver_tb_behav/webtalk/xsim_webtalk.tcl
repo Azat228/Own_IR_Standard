@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/
+webtalk_init -webtalk_dir C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sun Dec 14 21:07:23 2025" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Feb 24 16:48:58 2026" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "50f231e6-e5a7-448b-a4b0-41f000c97c91" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "0c0f060951684b9d8bc05437884d9d4a" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "60" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "68" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i9-14900HX" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "100 ms" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "6.01_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "16520_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3521177284 -regid "" -xml C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "5.78_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "16616_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2787944527 -regid "" -xml C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim/xsim.dir/nec_ir_receiver_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

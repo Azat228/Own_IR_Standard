@@ -111,14 +111,15 @@ always @(posedge clk) begin
                 cnt <= cnt + 1;
                 if (falling_edge) begin
                     if (cnt >= BIT_1_SPACE_MIN && cnt <= BIT_1_SPACE_MAX) begin
-                        shift_reg <= {shift_reg[30:0], 1'b1}; // LSB first
+                        // *** Fix: Shift in at position ***
+                        shift_reg[bit_count] <= 1'b1;
                         bit_count <= bit_count + 1;
                         if (bit_count == 6'd31)
                             state <= DONE;
                         else
                             state <= DATA_PULSE;
                     end else if (cnt >= BIT_0_SPACE_MIN && cnt <= BIT_0_SPACE_MAX) begin
-                        shift_reg <= {shift_reg[30:0], 1'b0}; // LSB first
+                        shift_reg[bit_count] <= 1'b0;
                         bit_count <= bit_count + 1;
                         if (bit_count == 6'd31)
                             state <= DONE;
@@ -148,5 +149,4 @@ always @(posedge clk) begin
         endcase
     end
 end
-
 endmodule

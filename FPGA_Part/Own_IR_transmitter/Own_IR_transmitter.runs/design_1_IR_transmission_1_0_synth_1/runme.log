@@ -10,6 +10,7 @@
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source design_1_IR_transmission_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1088.969 ; gain = 0.000
 Command: synth_design -top design_1_IR_transmission_1_0 -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
 WARNING: [IP_Flow 19-3571] IP 'design_1_IR_transmission_1_0' is restricted:
@@ -19,12 +20,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 29324
+INFO: [Synth 8-7075] Helper process launched with PID 23688
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1138.781 ; gain = 28.359
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1138.496 ; gain = 49.527
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_1_0' [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_1_0/synth/design_1_IR_transmission_1_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'IR_transmission' [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v:1]
+INFO: [Synth 8-6157] synthesizing module 'design_1_IR_transmission_1_0' [c:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_1_0/synth/design_1_IR_transmission_1_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'IR_transmission' [C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v:1]
 	Parameter CLK_FREQ bound to: 125000000 - type: integer 
 	Parameter CARRIER_FREQ bound to: 38000 - type: integer 
 	Parameter CLK_DIV bound to: 1644 - type: integer 
@@ -41,48 +42,48 @@ INFO: [Synth 8-6157] synthesizing module 'IR_transmission' [C:/Users/azati/Own_I
 	Parameter DATA_SPACE bound to: 4 - type: integer 
 	Parameter STOP bound to: 5 - type: integer 
 	Parameter RELAX bound to: 6 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'IR_transmission' (1#1) [C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_1_0' (2#1) [c:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_1_0/synth/design_1_IR_transmission_1_0.v:58]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'IR_transmission' (1#1) [C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/new/IR_transmission.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_IR_transmission_1_0' (2#1) [c:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_1_0/synth/design_1_IR_transmission_1_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1194.453 ; gain = 84.031
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1193.926 ; gain = 104.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1194.453 ; gain = 84.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.926 ; gain = 104.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1194.453 ; gain = 84.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.926 ; gain = 104.957
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1194.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1193.926 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1289.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1291.070 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1289.629 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1291.117 ; gain = 0.047
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1289.629 ; gain = 179.207
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1289.629 ; gain = 179.207
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1289.629 ; gain = 179.207
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'IR_transmission'
 ---------------------------------------------------------------------------------------------------
@@ -97,7 +98,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'IR_tr
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'IR_transmission'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1289.629 ; gain = 179.207
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -137,25 +138,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1289.629 ; gain = 179.207
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1289.770 ; gain = 179.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1289.992 ; gain = 179.570
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 1291.117 ; gain = 202.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:05 . Memory (MB): peak = 1314.141 ; gain = 225.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -173,37 +174,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -229,27 +230,27 @@ Report Cell Usage:
 |8     |FDRE   |    91|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1318.586 ; gain = 112.988
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1318.586 ; gain = 208.164
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 1314.156 ; gain = 127.996
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:16 . Memory (MB): peak = 1314.156 ; gain = 225.188
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1329.574 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1326.227 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1336.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1329.387 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1336.211 ; gain = 225.789
-INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_0_synth_1/design_1_IR_transmission_1_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:40 . Memory (MB): peak = 1329.387 ; gain = 240.418
+INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_0_synth_1/design_1_IR_transmission_1_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_0_synth_1/design_1_IR_transmission_1_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_0_synth_1/design_1_IR_transmission_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_IR_transmission_1_0_utilization_synth.rpt -pb design_1_IR_transmission_1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 18 19:18:28 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 22 22:44:30 2026...
