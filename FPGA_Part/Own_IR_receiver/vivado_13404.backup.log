@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Dec 14 21:10:13 2025
+# Process ID: 13404
+# Current directory: C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31640 C:\Users\azati\Downloads\Own_IR_Standard\FPGA_Part\Own_IR_receiver\Own_IR_Receiver.xpr
+# Log file: C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/vivado.log
+# Journal file: C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.762 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'nec_ir_receiver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/azati/Downloads/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj nec_ir_receiver_tb_vlog.prj"

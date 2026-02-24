@@ -1,0 +1,117 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 24 17:02:03 2026
+# Process ID: 25724
+# Current directory: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2108 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_receiver\Own_IR_Receiver.xpr
+# Log file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/vivado.log
+# Journal file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_receiver' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.gen/sources_1', nor could it be found using path 'C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:47 ; elapsed = 00:00:15 . Memory (MB): peak = 1088.758 ; gain = 0.000
+update_compile_order -fileset sources_1
+create_bd_design "design_1"
+Wrote  : <C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_receiver\Own_IR_Receiver.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1088.758 ; gain = 0.000
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference nec_ir_receiver nec_ir_receiver_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property location {1 132 91} [get_bd_cells nec_ir_receiver_0]
+create_bd_cell -type module -reference nec_ir_receiver nec_ir_receiver_1
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins nec_ir_receiver_0/clk]
+create_bd_cell: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1371.480 ; gain = 269.961
+apply_bd_automation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1374.469 ; gain = 272.949
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins nec_ir_receiver_1/clk]
+endgroup
+delete_bd_objs [get_bd_nets clk_wiz_1_locked] [get_bd_nets rst_clk_wiz_1_100M_peripheral_aresetn] [get_bd_cells rst_clk_wiz_1_100M]
+delete_bd_objs [get_bd_nets clk_wiz_locked] [get_bd_nets rst_clk_wiz_100M_peripheral_aresetn] [get_bd_cells rst_clk_wiz_100M]
+delete_bd_objs [get_bd_nets clk_wiz_clk_out1] [get_bd_cells clk_wiz]
+delete_bd_objs [get_bd_nets clk_wiz_1_clk_out1] [get_bd_cells clk_wiz_1]
+set_property location {2 463 -46} [get_bd_cells nec_ir_receiver_1]
+startgroup
+make_bd_pins_external  [get_bd_cells nec_ir_receiver_1]
+make_bd_intf_pins_external  [get_bd_cells nec_ir_receiver_1]
+INFO: [BD 5-409] No interface pins to be made external for /nec_ir_receiver_1
+endgroup
+delete_bd_objs [get_bd_nets clk_0_1]
+delete_bd_objs [get_bd_nets rst_0_1]
+delete_bd_objs [get_bd_ports clk_0]
+delete_bd_objs [get_bd_ports rst_0]
+startgroup
+make_bd_pins_external  [get_bd_cells nec_ir_receiver_0]
+make_bd_intf_pins_external  [get_bd_cells nec_ir_receiver_0]
+INFO: [BD 5-409] No interface pins to be made external for /nec_ir_receiver_0
+endgroup
+delete_bd_objs [get_bd_nets clk_0_1]
+delete_bd_objs [get_bd_ports clk_0]
+delete_bd_objs [get_bd_nets rst_0_1]
+delete_bd_objs [get_bd_ports rst_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins nec_ir_receiver_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins nec_ir_receiver_1/clk]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {New External Port} Manual_Source {Auto}}  [get_bd_pins clk_wiz/clk_in1]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {New External Port (ACTIVE_HIGH)}}  [get_bd_pins clk_wiz/reset]
+INFO: [BoardRule 102-10] create_bd_port -dir I reset_rtl_0 -type rst
+INFO: [BoardRule 102-7] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0
+INFO: [BoardRule 102-15] connect_bd_net /reset_rtl_0 /clk_wiz/reset
+INFO: [BoardRule 102-19] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {New External Port} Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/clk_in1]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {New External Port (ACTIVE_HIGH)}}  [get_bd_pins clk_wiz_1/reset]
+INFO: [BoardRule 102-10] create_bd_port -dir I reset_rtl_0_0 -type rst
+INFO: [BoardRule 102-7] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0_0
+INFO: [BoardRule 102-15] connect_bd_net /reset_rtl_0_0 /clk_wiz_1/reset
+INFO: [BoardRule 102-19] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl_0_0
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
+endgroup
+set_property location {2.5 965 -142} [get_bd_cells nec_ir_receiver_1]
+set_property location {3 984 168} [get_bd_cells nec_ir_receiver_0]
+update_module_reference design_1_nec_ir_receiver_1_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_nec_ir_receiver_1_0 from nec_ir_receiver_v1_0 1.0 to nec_ir_receiver_v1_0 1.0
+Wrote  : <C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_receiver\Own_IR_Receiver.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets clk_wiz_1_locked] [get_bd_nets rst_clk_wiz_1_100M_peripheral_aresetn] [get_bd_cells rst_clk_wiz_1_100M]
+delete_bd_objs [get_bd_nets clk_wiz_locked] [get_bd_nets rst_clk_wiz_100M_peripheral_aresetn] [get_bd_cells rst_clk_wiz_100M]
+delete_bd_objs [get_bd_nets clk_wiz_1_clk_out1] [get_bd_nets reset_rtl_0_0_1] [get_bd_nets clk_100MHz_1_1] [get_bd_cells clk_wiz_1]
+delete_bd_objs [get_bd_nets clk_wiz_clk_out1] [get_bd_nets reset_rtl_0_1] [get_bd_nets clk_100MHz_1] [get_bd_cells clk_wiz]
+delete_bd_objs [get_bd_ports reset_rtl_0]
+delete_bd_objs [get_bd_ports clk_100MHz]
+delete_bd_objs [get_bd_ports reset_rtl_0_0]
+delete_bd_objs [get_bd_ports clk_100MHz_1]
+delete_bd_objs [get_bd_nets nec_ir_receiver_1_data_valid] [get_bd_ports data_valid_0]
+delete_bd_objs [get_bd_nets nec_ir_receiver_1_address] [get_bd_ports address_0]
+delete_bd_objs [get_bd_nets nec_ir_receiver_1_command] [get_bd_ports command_0]
+delete_bd_objs [get_bd_nets nec_ir_receiver_0_data_valid] [get_bd_ports data_valid_1]
+delete_bd_objs [get_bd_nets nec_ir_receiver_0_address] [get_bd_ports address_1]
+delete_bd_objs [get_bd_nets nec_ir_receiver_0_command] [get_bd_ports command_1]
+save_bd_design
+Wrote  : <C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_receiver\Own_IR_Receiver.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 24 17:50:02 2026...
