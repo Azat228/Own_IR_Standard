@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Feb 24 17:23:09 2026
-# Process ID: 25704
+# Start of session at: Wed Feb 25 12:28:18 2026
+# Process ID: 14480
 # Current directory: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2600 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23308 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr
 # Log file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/vivado.log
 # Journal file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter\vivado.jou
 #-----------------------------------------------------------
@@ -17,7 +17,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:39 ; elapsed = 00:00:30 . Memory (MB): peak = 1080.383 ; gain = 0.000
+open_project: Time (s): cpu = 00:01:04 ; elapsed = 00:00:33 . Memory (MB): peak = 1089.102 ; gain = 0.000
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd}
 Reading block design file <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd>...
@@ -32,6 +32,35 @@ Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_
 Adding component instance block -- xilinx.com:module_ref:IR_transmission:1.0 - IR_transmission_1
 Adding component instance block -- xilinx.com:module_ref:IR_transmission:1.0 - IR_transmission_2
 Successfully read diagram <design_1> from block design file <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 1207.215 ; gain = 59.457
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 24 18:20:14 2026...
+open_bd_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 1197.496 ; gain = 54.633
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Feb 25 13:09:50 2026] Launched synth_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
+[Wed Feb 25 13:09:50 2026] Launched impl_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1729.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.897 . Memory (MB): peak = 2443.723 ; gain = 7.215
+Restored from archive | CPU: 5.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.900 . Memory (MB): peak = 2443.723 ; gain = 7.215
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2443.723 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:01:56 ; elapsed = 00:00:47 . Memory (MB): peak = 2569.148 ; gain = 1161.547
+open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 2667.895 ; gain = 0.000
+file copy -force C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/design_1_wrapper.bit

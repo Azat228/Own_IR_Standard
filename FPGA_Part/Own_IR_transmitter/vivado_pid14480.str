@@ -1,0 +1,369 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 14480
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Feb 25 12:29:03 CST 2026
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 32
+
+Screen size: 2560x1600
+Screen resolution (DPI): 150
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	azati
+User home directory: C:/Users/azati
+User working directory: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter
+User country: 	HK
+User language: 	en
+User locale: 	en_HK
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.2
+RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/azati/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/azati/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/azati/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/vivado.log
+Vivado journal file location: 	C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/vivado.jou
+Engine tmp dir: 	C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/.Xil/Vivado-14480-Azat
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,096 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  2151 ms.
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 106 MB (+108210kb) [00:00:25]
+// [Engine Memory]: 1,096 MB (+997288kb) [00:00:25]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,096 MB. GUI used memory: 67 MB. Current time: 2/25/26, 12:29:04 PM CST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 122 MB (+11461kb) [00:00:50]
+// [GUI Memory]: 129 MB (+1182kb) [00:00:53]
+// WARNING: HEventQueue.dispatchEvent() is taking  14170 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1682 ms.
+// Tcl Message: open_project C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'. 
+// WARNING: HEventQueue.dispatchEvent() is taking  3258 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1119 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:01:04 ; elapsed = 00:00:33 . Memory (MB): peak = 1089.102 ; gain = 0.000 
+// Project name: Own_IR_transmitter; location: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter; part: xc7z020clg400-1
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 730ms to process. Increasing delay to 3000 ms.
+dismissDialog("Open Project"); // bz
+// [GUI Memory]: 137 MB (+1254kb) [00:01:08]
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 742ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1091 ms. Increasing delay to 3000 ms.
+// WARNING: updateGUI() is taking  1215 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1847ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1848 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 152 MB (+8497kb) [00:01:32]
+// PAPropertyPanels.initPanels (IR_transmission.v) elapsed time: 0.4s
+// Elapsed time: 582 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IR_transmission (IR_transmission.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IR_transmission (IR_transmission.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IR_transmission (IR_transmission.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IR_transmission (IR_transmission.v)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  35807 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  176574 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,096 MB. GUI used memory: 93 MB. Current time: 2/25/26, 12:59:07 PM CST
+// Elapsed time: 1327 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constrains.xdc]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constrains.xdc]", 5, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constrains.xdc]", 5, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Reading block design file <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd>... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  5222 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1591 ms.
+// PAPropertyPanels.initPanels (design_1.bd) elapsed time: 0.2s
+// [Engine Memory]: 1,151 MB (+1161kb) [00:33:26]
+// WARNING: HEventQueue.dispatchEvent() is taking  2202 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,191 MB. GUI used memory: 101 MB. Current time: 2/25/26, 1:02:06 PM CST
+// Elapsed time: 20 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 1197.496 ; gain = 54.633 
+// [Engine Memory]: 1,213 MB (+4497kb) [00:33:30]
+dismissDialog("Open Block Design"); // bz
+// [GUI Memory]: 162 MB (+3100kb) [00:35:52]
+// WARNING: HEventQueue.dispatchEvent() is taking  62906 ms.
+// PAPropertyPanels.initPanels (IR_transmission_1) elapsed time: 0.2s
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize Module Reference: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1157 ms.
+// Elapsed time: 399 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize Module Reference"); // r
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize Module Reference: addNotify
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize Module Reference"); // r
+// Run Command: RDIResourceCommand.RDICommands_COPY
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constrains.xdc", 4); // m
+selectCodeEditor("constrains.xdc", 873, 10); // bP
+selectCodeEditor("constrains.xdc", 873, 10, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "constrains.xdc", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: RDIResourceCommand.RDICommands_COPY
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constrains.xdc", 4); // m
+typeControlKey((HResource) null, "constrains.xdc", 'v'); // bP
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 171 MB (+170kb) [00:40:58]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// Run Command: RDIResourceCommand.RDICommands_COPY
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constrains.xdc", 4); // m
+selectCodeEditor("constrains.xdc", 861, 31); // bP
+selectCodeEditor("constrains.xdc", 861, 31, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "constrains.xdc", 'v'); // bP
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// bz (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// cD (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cA' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // cD
+// TclEventType: RUN_LAUNCH
+// bz (cr):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 16 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Feb 25 13:09:50 2026] Launched synth_1... Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log [Wed Feb 25 13:09:50 2026] Launched impl_1... Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 317 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cr):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,367 MB. GUI used memory: 113 MB. Current time: 2/25/26, 1:15:11 PM CST
+// [Engine Memory]: 1,696 MB (+442203kb) [00:46:40]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 798ms to process. Increasing delay to 2000 ms.
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,241 MB. GUI used memory: 113 MB. Current time: 2/25/26, 1:15:41 PM CST
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,242 MB. GUI used memory: 113 MB. Current time: 2/25/26, 1:15:41 PM CST
+// [Engine Memory]: 2,242 MB (+483876kb) [00:47:04]
+// Xgd.load filename: C:/Xilinx/Vivado/2020.2/data/parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 4.7s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 4.8s
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2.3s
+// [Engine Memory]: 2,382 MB (+29317kb) [00:47:13]
+// [GUI Memory]: 183 MB (+4404kb) [00:47:16]
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  7306 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1729.652 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.897 . Memory (MB): peak = 2443.723 ; gain = 7.215 
+// Tcl Message: Restored from archive | CPU: 5.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.900 . Memory (MB): peak = 2443.723 ; gain = 7.215 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2443.723 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// WARNING: HEventQueue.dispatchEvent() is taking  1117 ms.
+// Tcl Message: open_run: Time (s): cpu = 00:01:56 ; elapsed = 00:00:47 . Memory (MB): peak = 2569.148 ; gain = 1161.547 
+// ExpRunCommands.openImplResults elapsed time: 49.5s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// WARNING: HEventQueue.dispatchEvent() is taking  1714 ms.
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 194 MB (+1577kb) [00:47:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  3310 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2403 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,404 MB. GUI used memory: 152 MB. Current time: 2/25/26, 1:16:08 PM CST
+// 'dV' command handler elapsed time: 63 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  4781 ms.
+// Device view-level: 0.1
+// WARNING: HEventQueue.dispatchEvent() is taking  1343 ms.
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 197519, 168078); // E
+// Device select: 'Tile - DSP_R_X25Y105'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 663, 284, 1600, 822); // U
+// PAPropertyPanels.initPanels (Tile: DSP_R_X25Y105) elapsed time: 0.6s
+// Device view-level: 0.0
+// Elapsed time: 65 seconds
+dismissDialog("Open Implemented Design"); // bz
+// [GUI Memory]: 204 MB (+710kb) [00:47:38]
+selectTab((HResource) null, (HResource) null, "Power", 5); // aK
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aK
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK
+selectTab((HResource) null, (HResource) null, "Log", 2); // aK
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aK
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aK
+selectTab((HResource) null, (HResource) null, "Power", 5); // aK
+// Elapsed time: 14 seconds
+selectTab((HResource) null, (HResource) null, "Methodology", 6); // aK
+// Elapsed time: 12 seconds
+collapseTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "Bad Practice (2) ; ", 2); // P
+expandTreeTable(PAResourceTtoZ.VioTreeTablePanel_VIO_TREE_TABLE, "Bad Practice (2) ; ", 2); // P
+selectTab((HResource) null, (HResource) null, "Timing", 7); // aK
+// Elapsed time: 351 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+// PAPropertyPanels.initPanels (design_1.bd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// bz (cr):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  5564 ms.
+// Tcl Message: open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd} 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 2667.895 ; gain = 0.000 
+dismissDialog("Open Block Design"); // bz
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m
+// [GUI Memory]: 216 MB (+1141kb) [00:56:13]
+// Elapsed time: 109 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ah
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_BITSTREAM_FILES, "Export Bitstream File..."); // ak
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ac
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_BITSTREAM_FILES
+// HMemoryUtils.trashcanNow. Engine heap size: 2,484 MB. GUI used memory: 151 MB. Current time: 2/25/26, 1:25:07 PM CST
+// Elapsed time: 35 seconds
+setFileChooser("C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/design_1_wrapper");
+// 'a' command handler elapsed time: 35 seconds
+// Tcl Message: file copy -force C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/design_1_wrapper.bit 
+selectButton("OptionPane.button", "OK"); // JButton
