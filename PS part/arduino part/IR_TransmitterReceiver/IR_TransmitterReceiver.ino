@@ -8,6 +8,7 @@ void setup() {
 
 void loop() {
   // For IR reception
+
   if (IrReceiver.decode()) {
     Serial.print("IR received: 0x");
     Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);
