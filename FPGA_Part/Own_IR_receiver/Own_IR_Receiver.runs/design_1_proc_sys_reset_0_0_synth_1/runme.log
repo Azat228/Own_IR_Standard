@@ -312,3 +312,18 @@ INFO: [Coretcl 2-1174] Renamed 6 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/Own_IR_Receiver.runs/design_1_proc_sys_reset_0_0_synth_1/design_1_proc_sys_reset_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_proc_sys_reset_0_0_utilization_synth.rpt -pb design_1_proc_sys_reset_0_0_utilization_synth.pb
 INFO: [Common 17-206] Exiting Vivado at Tue Feb 24 18:16:51 2026...
+
+*** Running vivado
+    with args -log design_1_proc_sys_reset_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_proc_sys_reset_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source design_1_proc_sys_reset_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1076.352 ; gain = 0.000
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_proc_sys_reset_0_0, cache-ID = 981f6ca5d8193852.
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 25 12:08:44 2026...
