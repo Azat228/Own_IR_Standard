@@ -185,9 +185,9 @@ This protocol is custom-designed and inspired by the NEC IR standard, with the f
 | Total bits | 32 bits | 10 bits |
 | Address bits | 8 bits | 5 bits |
 | Command bits | 8 bits | 5 bits |
-| Parallel channels | 1 | 2 (concurrent) ✨ |
+| Parallel channels | 2 | 2 (concurrent) ✨ |
 
-> 🚧 Parallel transmission (dual-channel) is currently still in progress.
+> 🚧 Parallel own transmission (dual-channel) is currently still in progress.
 
 ---
 
