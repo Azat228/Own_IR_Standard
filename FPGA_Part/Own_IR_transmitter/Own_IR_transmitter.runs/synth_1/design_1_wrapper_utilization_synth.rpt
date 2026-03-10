@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Feb 25 13:11:06 2026
+| Date         : Tue Mar 10 18:08:58 2026
 | Host         : Azat running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    2 |     0 |       125 |  1.60 |
+| Bonded IOB                  |   24 |     0 |       125 | 19.20 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,7 +146,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    2 |                  IO |
+| OBUF     |   24 |                  IO |
 +----------+------+---------------------+
 
 
@@ -157,13 +157,61 @@ Table of Contents
 |             Ref Name            | Used |
 +---------------------------------+------+
 | design_1_xbar_0                 |    1 |
+| design_1_tier2_xbar_3_0         |    1 |
+| design_1_tier2_xbar_2_0         |    1 |
+| design_1_tier2_xbar_1_0         |    1 |
+| design_1_tier2_xbar_0_0         |    1 |
 | design_1_rst_ps7_0_125M_0       |    1 |
 | design_1_processing_system7_0_0 |    1 |
+| design_1_axi_gpio_7_6           |    1 |
+| design_1_axi_gpio_7_5           |    1 |
+| design_1_axi_gpio_7_4           |    1 |
+| design_1_axi_gpio_7_3           |    1 |
+| design_1_axi_gpio_7_2           |    1 |
+| design_1_axi_gpio_7_1           |    1 |
+| design_1_axi_gpio_7_0           |    1 |
+| design_1_axi_gpio_4_2           |    1 |
+| design_1_axi_gpio_4_1           |    1 |
+| design_1_axi_gpio_4_0           |    1 |
+| design_1_axi_gpio_3_0           |    1 |
+| design_1_axi_gpio_2_0           |    1 |
 | design_1_axi_gpio_1_0           |    1 |
+| design_1_axi_gpio_14_9          |    1 |
+| design_1_axi_gpio_14_8          |    1 |
+| design_1_axi_gpio_14_7          |    1 |
+| design_1_axi_gpio_14_6          |    1 |
+| design_1_axi_gpio_14_5          |    1 |
+| design_1_axi_gpio_14_4          |    1 |
+| design_1_axi_gpio_14_3          |    1 |
+| design_1_axi_gpio_14_2          |    1 |
+| design_1_axi_gpio_14_1          |    1 |
+| design_1_axi_gpio_14_0          |    1 |
 | design_1_axi_gpio_0_1           |    1 |
 | design_1_axi_gpio_0_0           |    1 |
 | design_1_auto_pc_0              |    1 |
+| design_1_IR_transmission_9_0    |    1 |
+| design_1_IR_transmission_8_0    |    1 |
+| design_1_IR_transmission_7_0    |    1 |
+| design_1_IR_transmission_3_3    |    1 |
+| design_1_IR_transmission_3_2    |    1 |
+| design_1_IR_transmission_3_1    |    1 |
+| design_1_IR_transmission_3_0    |    1 |
+| design_1_IR_transmission_1_1    |    1 |
 | design_1_IR_transmission_1_0    |    1 |
+| design_1_IR_transmission_19_4   |    1 |
+| design_1_IR_transmission_19_3   |    1 |
+| design_1_IR_transmission_19_2   |    1 |
+| design_1_IR_transmission_19_1   |    1 |
+| design_1_IR_transmission_19_0   |    1 |
+| design_1_IR_transmission_18_0   |    1 |
+| design_1_IR_transmission_17_0   |    1 |
+| design_1_IR_transmission_15_1   |    1 |
+| design_1_IR_transmission_15_0   |    1 |
+| design_1_IR_transmission_14_0   |    1 |
+| design_1_IR_transmission_13_0   |    1 |
+| design_1_IR_transmission_12_0   |    1 |
+| design_1_IR_transmission_11_0   |    1 |
+| design_1_IR_transmission_10_0   |    1 |
 | design_1_IR_transmission_0_1    |    1 |
 +---------------------------------+------+
 

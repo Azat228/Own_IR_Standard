@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Feb 25 12:28:18 2026
-# Process ID: 14480
+# Start of session at: Tue Mar 10 15:08:36 2026
+# Process ID: 10888
 # Current directory: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23308 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30348 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr
 # Log file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/vivado.log
 # Journal file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter\vivado.jou
 #-----------------------------------------------------------
@@ -13,9 +13,415 @@ start_gui
 open_project C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.xpr
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd}
+copy_bd_objs /  [get_bd_cells {IR_transmission_1}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2}]
+connect_bd_net [get_bd_pins axi_gpio_3/gpio_io_o] [get_bd_pins IR_transmission_3/addr]
+connect_bd_net [get_bd_pins axi_gpio_3/gpio2_io_o] [get_bd_pins IR_transmission_3/code]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_3/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_3/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_3/clk]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_3/send]
+update_module_reference {design_1_IR_transmission_0_1 design_1_IR_transmission_1_0}
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_3]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_3]
+endgroup
+regenerate_bd_layout
+set_property location {3 855 -32} [get_bd_cells axi_gpio_3]
+set_property location {4 1256 -44} [get_bd_cells IR_transmission_3]
+copy_bd_objs /  [get_bd_cells {axi_gpio_3}]
+set_property location {3 926 -206} [get_bd_cells axi_gpio_4]
+copy_bd_objs /  [get_bd_cells {axi_gpio_4}]
+set_property location {3 949 -365} [get_bd_cells axi_gpio_5]
+copy_bd_objs /  [get_bd_cells {axi_gpio_4}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_4}]
+set_property location {3 870 -506} [get_bd_cells axi_gpio_6]
+set_property location {3 926 -660} [get_bd_cells axi_gpio_7]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+set_property location {4 1163 -671} [get_bd_cells IR_transmission_7]
+set_property location {4 1243 -359} [get_bd_cells IR_transmission_5]
+set_property location {4 1263 -515} [get_bd_cells IR_transmission_6]
+set_property location {4 1252 -198} [get_bd_cells IR_transmission_4]
+connect_bd_net [get_bd_pins axi_gpio_4/gpio_io_o] [get_bd_pins IR_transmission_4/addr]
+connect_bd_net [get_bd_pins axi_gpio_4/gpio2_io_o] [get_bd_pins IR_transmission_4/code]
+connect_bd_net [get_bd_pins axi_gpio_5/gpio_io_o] [get_bd_pins IR_transmission_5/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_5/gpio2_io_o] [get_bd_pins IR_transmission_5/code]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_6/gpio_io_o] [get_bd_pins IR_transmission_6/addr]
+connect_bd_net [get_bd_pins axi_gpio_6/gpio2_io_o] [get_bd_pins IR_transmission_6/code]
+connect_bd_net [get_bd_pins axi_gpio_7/gpio_io_o] [get_bd_pins IR_transmission_7/addr]
+connect_bd_net [get_bd_pins axi_gpio_7/gpio2_io_o] [get_bd_pins IR_transmission_7/code]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_4/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_4/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_5/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_5/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_6/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_6/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_7/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_7/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_4/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_5/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_6/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_7/clk]
+endgroup
+set_property location {4 1287 582} [get_bd_cells IR_transmission_2]
+set_property location {4 1299 577} [get_bd_cells IR_transmission_2]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_4/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_5/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_6/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_7/send]
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_7]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_7]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_6]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_6]
+endgroup
+delete_bd_objs [get_bd_nets IR_transmission_6_ir_out]
+delete_bd_objs [get_bd_ports ir_out_4]
+delete_bd_objs [get_bd_nets IR_transmission_7_ir_out] [get_bd_ports ir_out_3]
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_4]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_4]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_5]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_5]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_6]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_6]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_7]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_7]
+endgroup
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+set_property location {3 895 -818} [get_bd_cells axi_gpio_8]
+set_property location {3 915 -965} [get_bd_cells axi_gpio_9]
+set_property location {3 942 -1108} [get_bd_cells axi_gpio_10]
+set_property location {3 896 -1278} [get_bd_cells axi_gpio_11]
+set_property location {3 885 -1427} [get_bd_cells axi_gpio_12]
+set_property location {3 868 -1561} [get_bd_cells axi_gpio_13]
+set_property location {4 1245 -1289} [get_bd_cells axi_gpio_14]
+set_property location {3 919 -1710} [get_bd_cells axi_gpio_14]
+copy_bd_objs /  [get_bd_cells {IR_transmission_7}]
+set_property location {4 1290 -782} [get_bd_cells IR_transmission_8]
+set_property location {4 1291 -826} [get_bd_cells IR_transmission_8]
+copy_bd_objs /  [get_bd_cells {IR_transmission_8}]
+set_property location {4 1213 -981} [get_bd_cells IR_transmission_9]
+copy_bd_objs /  [get_bd_cells {IR_transmission_9}]
+set_property location {4 1292 -1116} [get_bd_cells IR_transmission_10]
+copy_bd_objs /  [get_bd_cells {IR_transmission_10}]
+set_property location {4 1317 -1271} [get_bd_cells IR_transmission_11]
+copy_bd_objs /  [get_bd_cells {IR_transmission_11}]
+set_property location {4 1298 -1411} [get_bd_cells IR_transmission_12]
+copy_bd_objs /  [get_bd_cells {IR_transmission_12}]
+set_property location {4 1314 -1564} [get_bd_cells IR_transmission_13]
+copy_bd_objs /  [get_bd_cells {IR_transmission_13}]
+set_property location {4 1317 -1720} [get_bd_cells IR_transmission_14]
+connect_bd_net [get_bd_pins axi_gpio_8/gpio_io_o] [get_bd_pins IR_transmission_8/addr]
+connect_bd_net [get_bd_pins axi_gpio_8/gpio2_io_o] [get_bd_pins IR_transmission_8/code]
+connect_bd_net [get_bd_pins axi_gpio_9/gpio_io_o] [get_bd_pins IR_transmission_9/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_9/gpio2_io_o] [get_bd_pins IR_transmission_9/code]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_10/gpio_io_o] [get_bd_pins IR_transmission_10/addr]
+connect_bd_net [get_bd_pins axi_gpio_10/gpio2_io_o] [get_bd_pins IR_transmission_10/code]
+connect_bd_net [get_bd_pins axi_gpio_11/gpio_io_o] [get_bd_pins IR_transmission_11/addr]
+connect_bd_net [get_bd_pins axi_gpio_11/gpio2_io_o] [get_bd_pins IR_transmission_11/code]
+connect_bd_net [get_bd_pins axi_gpio_12/gpio_io_o] [get_bd_pins IR_transmission_12/addr]
+connect_bd_net [get_bd_pins axi_gpio_12/gpio2_io_o] [get_bd_pins IR_transmission_12/code]
+connect_bd_net [get_bd_pins axi_gpio_13/gpio_io_o] [get_bd_pins IR_transmission_13/addr]
+connect_bd_net [get_bd_pins axi_gpio_13/gpio2_io_o] [get_bd_pins IR_transmission_13/code]
+connect_bd_net [get_bd_pins axi_gpio_14/gpio_io_o] [get_bd_pins IR_transmission_14/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_14/gpio2_io_o] [get_bd_pins IR_transmission_14/code]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_8/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_9/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_10/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_11/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_12/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_13/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_14/send]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_8/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_8/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_9/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_9/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_10/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_10/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_11/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_11/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_12/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_12/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_13/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_13/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_14/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_14/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_8/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_9/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_10/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_11/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_12/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_13/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_14/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_8]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_8]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_9]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_9]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_10]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_10]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_11]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_11]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_12]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_12]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_13]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_13]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_14]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_14]
+endgroup
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+set_property location {3 1076 -1978} [get_bd_cells axi_gpio_15]
+set_property location {4 1672 -381} [get_bd_cells IR_transmission_8]
+set_property location {4 1646 -535} [get_bd_cells IR_transmission_9]
+set_property location {4 1633 -711} [get_bd_cells IR_transmission_10]
+set_property location {4 1625 -880} [get_bd_cells IR_transmission_11]
+set_property location {4 1637 -1064} [get_bd_cells IR_transmission_12]
+set_property location {4 1644 -1254} [get_bd_cells IR_transmission_13]
+set_property location {4 1629 -1432} [get_bd_cells IR_transmission_14]
+startgroup
+set_property location {3 1151 -2360} [get_bd_cells axi_gpio_24]
+set_property location {3 1151 -2600} [get_bd_cells axi_gpio_15]
+set_property location {3 1151 -1660} [get_bd_cells axi_gpio_16]
+set_property location {3 1151 -1760} [get_bd_cells axi_gpio_18]
+set_property location {3 1151 -1860} [get_bd_cells axi_gpio_19]
+set_property location {3 1151 -2800} [get_bd_cells axi_gpio_20]
+set_property location {3 1151 -1960} [get_bd_cells axi_gpio_21]
+set_property location {3 1151 -2060} [get_bd_cells axi_gpio_22]
+set_property location {3 1151 -2860} [get_bd_cells axi_gpio_23]
+set_property location {3 1151 -2960} [get_bd_cells axi_gpio_17]
+endgroup
+set_property location {3.5 1375 -2442} [get_bd_cells axi_gpio_15]
+set_property location {4 1344 -1886} [get_bd_cells axi_gpio_15]
+set_property location {3 833 -1342} [get_bd_cells axi_gpio_15]
+copy_bd_objs /  [get_bd_cells {IR_transmission_14}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_15}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_15}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_17}]
+set_property location {3 1078 -2264} [get_bd_cells axi_gpio_22]
+set_property location {3 1066 -2103} [get_bd_cells axi_gpio_21]
+set_property location {3 1058 -2447} [get_bd_cells axi_gpio_20]
+set_property location {3 1100 -1894} [get_bd_cells axi_gpio_20]
+set_property location {3 1072 -2491} [get_bd_cells axi_gpio_24]
+set_property location {3 1071 -2326} [get_bd_cells axi_gpio_23]
+set_property location {3 1083 -2663} [get_bd_cells axi_gpio_17]
+set_property location {3 1066 -1256} [get_bd_cells axi_gpio_15]
+set_property location {3 1068 -1383} [get_bd_cells axi_gpio_16]
+set_property location {3 1074 -1188} [get_bd_cells axi_gpio_15]
+set_property location {3 1069 -1326} [get_bd_cells axi_gpio_16]
+set_property location {3 1111 -1464} [get_bd_cells axi_gpio_17]
+connect_bd_net [get_bd_pins axi_gpio_15/gpio_io_o] [get_bd_pins IR_transmission_15/addr]
+connect_bd_net [get_bd_pins axi_gpio_15/gpio2_io_o] [get_bd_pins IR_transmission_15/code]
+connect_bd_net [get_bd_pins axi_gpio_16/gpio_io_o] [get_bd_pins IR_transmission_16/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_16/gpio2_io_o] [get_bd_pins IR_transmission_16/code]
+endgroup
+set_property location {3 1091 -1480} [get_bd_cells axi_gpio_17]
+startgroup
+set_property location {3 1067 -1835} [get_bd_cells axi_gpio_17]
+set_property location {3 1067 -1905} [get_bd_cells axi_gpio_18]
+set_property location {3 1067 -1975} [get_bd_cells axi_gpio_19]
+set_property location {3 1067 -2465} [get_bd_cells axi_gpio_20]
+set_property location {3 1067 -2535} [get_bd_cells axi_gpio_21]
+set_property location {3 1067 -2605} [get_bd_cells axi_gpio_22]
+set_property location {3 1067 -3095} [get_bd_cells axi_gpio_23]
+set_property location {3 1067 -3235} [get_bd_cells axi_gpio_24]
+endgroup
+startgroup
+set_property location {3 1068 -3384} [get_bd_cells axi_gpio_24]
+set_property location {3 1068 -1844} [get_bd_cells axi_gpio_17]
+set_property location {3 1068 -1854} [get_bd_cells axi_gpio_18]
+set_property location {3 1068 -2144} [get_bd_cells axi_gpio_19]
+set_property location {3 1068 -2474} [get_bd_cells axi_gpio_20]
+set_property location {3 1068 -2484} [get_bd_cells axi_gpio_21]
+set_property location {3 1068 -3244} [get_bd_cells axi_gpio_23]
+set_property location {3 1068 -2774} [get_bd_cells axi_gpio_22]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_17/gpio_io_o] [get_bd_pins IR_transmission_17/addr]
+connect_bd_net [get_bd_pins axi_gpio_17/gpio2_io_o] [get_bd_pins IR_transmission_17/code]
+set_property location {3 1066 -1919} [get_bd_cells axi_gpio_18]
+connect_bd_net [get_bd_pins axi_gpio_18/gpio_io_o] [get_bd_pins IR_transmission_18/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_18/gpio2_io_o] [get_bd_pins IR_transmission_18/code]
+endgroup
+copy_bd_objs /  [get_bd_cells {IR_transmission_18}]
+set_property location {4 1612 -2144} [get_bd_cells IR_transmission_19]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+set_property location {4 1673 -2390} [get_bd_cells IR_transmission_20]
+set_property location {4 1695 -2569} [get_bd_cells IR_transmission_21]
+set_property location {4 1627 -2315} [get_bd_cells IR_transmission_20]
+set_property location {4 1642 -2476} [get_bd_cells IR_transmission_21]
+set_property location {4 1615 -2768} [get_bd_cells IR_transmission_22]
+set_property location {3 1087 -3005} [get_bd_cells axi_gpio_23]
+set_property location {3 1085 -3202} [get_bd_cells axi_gpio_24]
+set_property location {4 1690 -3007} [get_bd_cells IR_transmission_23]
+set_property location {4 1687 -3190} [get_bd_cells IR_transmission_24]
+connect_bd_net [get_bd_pins axi_gpio_19/gpio_io_o] [get_bd_pins IR_transmission_19/addr]
+connect_bd_net [get_bd_pins axi_gpio_19/gpio2_io_o] [get_bd_pins IR_transmission_19/code]
+connect_bd_net [get_bd_pins axi_gpio_20/gpio_io_o] [get_bd_pins IR_transmission_20/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_20/gpio2_io_o] [get_bd_pins IR_transmission_20/code]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_21/gpio_io_o] [get_bd_pins IR_transmission_21/addr]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_21/gpio2_io_o] [get_bd_pins IR_transmission_21/code]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_22/gpio_io_o] [get_bd_pins IR_transmission_22/addr]
+connect_bd_net [get_bd_pins axi_gpio_22/gpio2_io_o] [get_bd_pins IR_transmission_22/code]
+connect_bd_net [get_bd_pins axi_gpio_23/gpio_io_o] [get_bd_pins IR_transmission_23/addr]
+connect_bd_net [get_bd_pins axi_gpio_23/gpio2_io_o] [get_bd_pins IR_transmission_23/code]
+connect_bd_net [get_bd_pins axi_gpio_24/gpio_io_o] [get_bd_pins IR_transmission_24/addr]
+connect_bd_net [get_bd_pins axi_gpio_24/gpio2_io_o] [get_bd_pins IR_transmission_24/code]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_15/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_16/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_17/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_18/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_19/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_20/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_21/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_22/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_23/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_24/send]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_15/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_15/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_16/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_16/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_17/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_17/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_18/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_18/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_19/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_19/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_20/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_20/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_21/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_21/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_22/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_22/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_23/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_23/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_24/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_24/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_15/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_16/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_17/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_18/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_19/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_20/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_21/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_22/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_23/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_24/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_15]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_15]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_16]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_16]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_17]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_17]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_18]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_18]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_19]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_19]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_20]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_20]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_21]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_21]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_22]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_22]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_23]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_23]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_24]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_24]
+endgroup
+save_bd_design
 reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_1_IR_transmission_1_1_synth_1
+reset_run design_1_IR_transmission_3_2_synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+reset_run design_1_IR_transmission_1_1_synth_1
+reset_run design_1_IR_transmission_3_2_synth_1
+make_wrapper -files [get_files C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd] -top
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
 open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_design
+open_run impl_1
 open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd}
-file copy -force C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/design_1_wrapper.bit
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]

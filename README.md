@@ -1,6 +1,6 @@
 # OWN Standard IR Communication Protocol
 
-> A custom IR communication protocol inspired by NEC, featuring parallel dual-channel transmission using a PYNQ-Z2 FPGA and dual Arduino Uno receivers.
+> A custom IR communication protocol inspired by NEC (currently based on a simplified NEC implementation), featuring parallel 24-channel transmission using a PYNQ-Z2 FPGA and dual Arduino Uno receivers for testing.
 
 ---
 
@@ -18,12 +18,12 @@
 
 ## 🔍 Overview
 
-This project implements a custom IR communication standard across two components:
+This project implements a custom IR communication standard across two main components:
 
-| Component | Role |
-|-----------|------|
-| **PYNQ-Z2 FPGA** (PS + PL) | IR Transmitter — sends signals via AR0 and AR1 pins in parallel |
-| **Arduino Uno × 2** | IR Receivers — decode and display received signals over Serial |
+| Component              | Role                                      |
+|------------------------|-------------------------------------------|
+| **PYNQ-Z2 FPGA (PS + PL)** | IR Transmitter — sends signals via AR0 and AR1 pins in parallel |
+| **Arduino Uno × 2**    | IR Receivers — decode and display received signals over Serial |
 
 ---
 
@@ -33,47 +33,41 @@ This project implements a custom IR communication standard across two components
 
 - PYNQ-Z2 FPGA board × 1
 - Arduino Uno × 2
-- IR transmitter × 2 (connected to FPGA)
+- IR transmitter × 24 (connected to FPGA)
 - IR receiver × 2 (one per Arduino)
 - Jumper wires
 
-> ⚠️ **Important:** Place a physical barrier between the two IR transmitters to prevent signal interference.
+> ⚠️ **Important:** Place a physical barrier between the two IR transmitters to prevent signal interference.(I used a copper Sheet)
 
 ---
 
 ### 🔌 Wiring Connections
 
-#### FPGA → IR Transmitter 1
+#### FPGA → IR Transmitters
 
-| IR Transmitter 1 | PYNQ-Z2 Pin |
-|------------------|-------------|
-| Data             | AR0         |
-| VCC              | VCC         |
-| GND              | GND         |
-
-#### FPGA → IR Transmitter 2
-
-| IR Transmitter 2 | PYNQ-Z2 Pin |
-|------------------|-------------|
-| Data             | AR1         |
-| VCC              | VCC         |
-| GND              | GND         |
+| IR Transmitter | PYNQ-Z2 Pin |
+|----------------|-------------|
+| Data (Transmitter 1) | AR0 |
+| Data (Transmitter 2) | AR1 |
+| ... (and so on for all 24) | AR0 to AR13, A0 to A5, PMODA[0-4] |
+| VCC (all) | VCC |
+| GND (all) | GND |
 
 #### Arduino 1 (Blue) → IR Receiver 1
 
 | IR Receiver 1 | Arduino Pin |
 |---------------|-------------|
-| Data          | Pin 11      |
-| VCC           | 5V          |
-| GND           | GND         |
+| Data          | Pin 11     |
+| VCC           | 5V         |
+| GND           | GND        |
 
 #### Arduino 2 (Green) → IR Receiver 2
 
 | IR Receiver 2 | Arduino Pin |
 |---------------|-------------|
-| Data          | Pin 11      |
-| VCC           | 5V          |
-| GND           | GND         |
+| Data          | Pin 10     |
+| VCC           | 5V         |
+| GND           | GND        |
 
 ---
 
@@ -82,20 +76,20 @@ This project implements a custom IR communication standard across two components
 <details>
 <summary>Click to expand wiring photos</summary>
 
-**FPGA + Transmitters:**
-![FPGA and Transmitters](<WhatsApp Image 2026-03-09 at 17.52.39.jpeg>)
+**FPGA + Transmitters:**  
+![FPGA and Transmitters](img/WhatsApp%20Image%202026-03-09%20at%2017.52.39.jpeg)
 
-**Arduino 1 (Blue) + Receiver:**
-![Arduino 1](image-1.png)
+**Arduino 1 (Blue) + Receiver:**  
+![Arduino 1](img/image-1.png)
 
-**Arduino 2 (Green) + Receiver:**
-![Arduino 2](<WhatsApp Image 2026-03-09 at 17.52.38.jpeg>)
+**Arduino 2 (Green) + Receiver:**  
+![Arduino 2](img/WhatsApp%20Image%202026-03-09%20at%2017.52.38.jpeg)
 
-**Full System Connections:**
-![Full Setup](image-3.png)
+**Full System Connections:**  
+![Full Setup](img/image-3.png)
 
-**Transmitter Barrier (interference prevention):**
-![Barrier](image-2.png)
+**Transmitter Barrier (interference prevention):**  
+![Barrier](img/image-2.png)
 
 </details>
 
@@ -109,13 +103,16 @@ This project implements a custom IR communication standard across two components
 Own_IR_Standard/
 ├── PS part/
 │   └── nec_onlyFPGA.ipynb          # Jupyter notebook for PYNQ-Z2
-├── PL part/                         # Vivado hardware design files
+├── PL part/                        # Vivado hardware design files
+│   └── IR_research.docx            # System description document
 ├── arduino part/
-│   └── IR_TransmitterReceiver/
-│       └── IR_TransmitterReceiver.ino
+│   ├── IR_TransmitterReceiver/
+│   │   └── IR_TransmitterReceiver.ino
+│   └── IR_Receiver2/
+│       └── IR_Receiver2.ino
 └── xilinx/overlays/own/
-    ├── design_1_wrapper.bit         # FPGA bitstream
-    └── design_1_wrapper.hwh         # Hardware handoff file
+    ├── design_1_wrapper.bit        # FPGA bitstream
+    └── design_1_wrapper.hwh        # Hardware handoff file
 ```
 
 ### Required Libraries
@@ -136,7 +133,7 @@ For first-time setup, configure the IP address by following:
 - 📺 [Video Guide](https://www.youtube.com/watch?v=mZ8zO3Yy-Fg)
 - 📄 [Written Tutorial](http://blog.umer-farooq.com/a-pynq-z2-guide-for-absolute-dummies-part-i-fun-with-leds-and-switches-47dd76abf9a9)
 
-![Network Configuration Reference](Image_for_more.png)
+![Network Configuration Reference](img/Image_for_more.png)
 
 #### 2. Access the PYNQ-Z2 Jupyter Server
 
@@ -150,11 +147,11 @@ http://192.168.2.99:9090/
 
 #### 3. Upload Project Files to the Server
 
-| File | Destination on Server |
-|------|-----------------------|
-| `nec_onlyFPGA.ipynb` | Your project folder |
-| `design_1_wrapper.bit` | `xilinx/overlays/own/` |
-| `design_1_wrapper.hwh` | `xilinx/overlays/own/` |
+| File                  | Destination on Server          |
+|-----------------------|--------------------------------|
+| `nec_onlyFPGA.ipynb`  | Your project folder            |
+| `design_1_wrapper.bit`| `xilinx/overlays/own/`         |
+| `design_1_wrapper.hwh`| `xilinx/overlays/own/`         |
 
 #### 4. Upload the Arduino Sketch
 
@@ -171,7 +168,7 @@ http://192.168.2.99:9090/
 
 **What happens:**
 - The FPGA transmits IR signals **simultaneously** via AR0 (Transmitter 1) and AR1 (Transmitter 2)
-- Each Arduino receives its respective IR signal on Pin 11
+- Each Arduino receives its respective IR signal on Pin 11 (Arduino 1) and Pin 10 (Arduino 2)
 - Decoded values are printed in each Arduino's **Serial Monitor** at baud rate `9600`
 
 ---
@@ -180,20 +177,18 @@ http://192.168.2.99:9090/
 
 This protocol is custom-designed and inspired by the NEC IR standard, with the following differences:
 
-| Feature | NEC Standard | OWN Standard |
-|---------|-------------|--------------|
-| Total bits | 32 bits | 10 bits |
-| Address bits | 8 bits | 5 bits |
-| Command bits | 8 bits | 5 bits |
-| Parallel channels | 2 | 2 (concurrent) ✨ |
+| Feature          | NEC Standard | OWN Standard          |
+|------------------|--------------|-----------------------|
+| Total bits       | 32 bits     | 10 bits              |
+| Address bits     | 8 bits      | 5 bits               |
+| Command bits     | 8 bits      | 5 bits               |
+| Parallel channels| 1            | 2 (concurrent) ✨    |
 
-> 🚧 Parallel own transmission (dual-channel) is currently still in progress.
+> 🚧 Parallel OWN transmission  is currently still in progress.
 
 ---
 
 ## 🔧 Modifying the PL Design
-
-To modify the hardware design in Vivado:
 
 ### 1. Install Required Tools
 
@@ -202,20 +197,20 @@ To modify the hardware design in Vivado:
 
 ### 2. Project Folder Responsibilities
 
-| Folder | Description |
-|--------|-------------|
-| `PS part/` | PYNQ-Z2 server-side code (Processing System) |
-| `PL part/` | IP cores and hardware design (Programmable Logic) |
-| `arduino part/` | Arduino code for testing and debugging |
+| Folder      | Description                                      |
+|-------------|--------------------------------------------------|
+| `PS part/`  | PYNQ-Z2 server-side code (Processing System)    |
+| `PL part/`  | IP cores and hardware design (Programmable Logic)|
+| `arduino part/` | Arduino code for testing and debugging       |
 
 ---
 
 ## 🐛 Troubleshooting
 
-| Symptom | Possible Cause | Solution |
-|---------|---------------|----------|
-| No IR signal received | Receiver not powered | Check that the LED on the IR receiver is lit |
-| Garbled / corrupted data | Baud rate mismatch | Ensure both ends use baud rate `9600` |
-| FPGA not responding | Board still booting | Wait 1–2 minutes after powering on |
-| Arduino not detected | Connection issue | Check USB cables and verify the correct COM port is selected |
+| Symptom                      | Possible Cause              | Solution                                      |
+|------------------------------|-----------------------------|-----------------------------------------------|
+| No IR signal received        | Receiver not powered        | Check that the LED on the IR receiver is lit |
+| Garbled / corrupted data     | Baud rate mismatch          | Ensure both ends use baud rate `9600`        |
+| FPGA not responding          | Board still booting         | Wait 1–2 minutes after powering on           |
+| Arduino not detected         | Connection issue            | Check USB cables and verify the correct COM port is selected |
 | Signal interference between channels | No barrier between transmitters | Place a physical divider between the two IR transmitters |

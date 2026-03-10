@@ -2,22 +2,21 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Feb 25 12:28:18 2026
-# Process ID: 14480
+# Start of session at: Tue Mar 10 15:08:36 2026
+# Process ID: 10888
 # Current directory: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23308 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30348 C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.xpr
 # Log file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/vivado.log
 # Journal file: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/azati/Downloads/Own_IR_Standard-main/Own_IR_Standard-main/FPGA_Part/Own_IR_transmitter' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:01:04 ; elapsed = 00:00:33 . Memory (MB): peak = 1089.102 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1076.035 ; gain = 0.000
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd}
 Reading block design file <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd>...
@@ -32,17 +31,679 @@ Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_
 Adding component instance block -- xilinx.com:module_ref:IR_transmission:1.0 - IR_transmission_1
 Adding component instance block -- xilinx.com:module_ref:IR_transmission:1.0 - IR_transmission_2
 Successfully read diagram <design_1> from block design file <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 1197.496 ; gain = 54.633
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1190.996 ; gain = 68.691
+copy_bd_objs /  [get_bd_cells {IR_transmission_1}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2}]
+connect_bd_net [get_bd_pins axi_gpio_3/gpio_io_o] [get_bd_pins IR_transmission_3/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_3/gpio_io_o> is being overridden by the user with net <axi_gpio_3_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_3/gpio2_io_o] [get_bd_pins IR_transmission_3/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_3/gpio2_io_o> is being overridden by the user with net <axi_gpio_3_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_3/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_3/S_AXI]
+Slave segment '/axi_gpio_3/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4123_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_3/clk]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_3/send]
+update_module_reference {design_1_IR_transmission_0_1 design_1_IR_transmission_1_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_IR_transmission_0_1 from IR_transmission_v1_0 1.0 to IR_transmission_v1_0 1.0
+INFO: [IP_Flow 19-1972] Upgraded design_1_IR_transmission_1_0 from IR_transmission_v1_0 1.0 to IR_transmission_v1_0 1.0
+Wrote  : <C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_3]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_3]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_3
+endgroup
+regenerate_bd_layout
+set_property location {3 855 -32} [get_bd_cells axi_gpio_3]
+set_property location {4 1256 -44} [get_bd_cells IR_transmission_3]
+copy_bd_objs /  [get_bd_cells {axi_gpio_3}]
+set_property location {3 926 -206} [get_bd_cells axi_gpio_4]
+copy_bd_objs /  [get_bd_cells {axi_gpio_4}]
+set_property location {3 949 -365} [get_bd_cells axi_gpio_5]
+copy_bd_objs /  [get_bd_cells {axi_gpio_4}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_4}]
+set_property location {3 870 -506} [get_bd_cells axi_gpio_6]
+set_property location {3 926 -660} [get_bd_cells axi_gpio_7]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_3}]
+set_property location {4 1163 -671} [get_bd_cells IR_transmission_7]
+set_property location {4 1243 -359} [get_bd_cells IR_transmission_5]
+set_property location {4 1263 -515} [get_bd_cells IR_transmission_6]
+set_property location {4 1252 -198} [get_bd_cells IR_transmission_4]
+connect_bd_net [get_bd_pins axi_gpio_4/gpio_io_o] [get_bd_pins IR_transmission_4/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_4/gpio_io_o> is being overridden by the user with net <axi_gpio_4_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_4/gpio2_io_o] [get_bd_pins IR_transmission_4/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_4/gpio2_io_o> is being overridden by the user with net <axi_gpio_4_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_5/gpio_io_o] [get_bd_pins IR_transmission_5/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_5/gpio_io_o> is being overridden by the user with net <axi_gpio_5_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_5/gpio2_io_o] [get_bd_pins IR_transmission_5/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_5/gpio2_io_o> is being overridden by the user with net <axi_gpio_5_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_6/gpio_io_o] [get_bd_pins IR_transmission_6/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_6/gpio_io_o> is being overridden by the user with net <axi_gpio_6_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_6/gpio2_io_o] [get_bd_pins IR_transmission_6/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_6/gpio2_io_o> is being overridden by the user with net <axi_gpio_6_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_7/gpio_io_o] [get_bd_pins IR_transmission_7/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_7/gpio_io_o> is being overridden by the user with net <axi_gpio_7_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_7/gpio2_io_o] [get_bd_pins IR_transmission_7/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_7/gpio2_io_o> is being overridden by the user with net <axi_gpio_7_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_4/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_4/S_AXI]
+Slave segment '/axi_gpio_4/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4124_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_5/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_5/S_AXI]
+Slave segment '/axi_gpio_5/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4125_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_6/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_6/S_AXI]
+Slave segment '/axi_gpio_6/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4126_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_7/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_7/S_AXI]
+Slave segment '/axi_gpio_7/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4127_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_4/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_5/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_6/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_7/clk]
+endgroup
+set_property location {4 1287 582} [get_bd_cells IR_transmission_2]
+set_property location {4 1299 577} [get_bd_cells IR_transmission_2]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_4/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_5/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_6/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_7/send]
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_7]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_7]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_7
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_6]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_6]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_6
+endgroup
+delete_bd_objs [get_bd_nets IR_transmission_6_ir_out]
+delete_bd_objs [get_bd_ports ir_out_4]
+delete_bd_objs [get_bd_nets IR_transmission_7_ir_out] [get_bd_ports ir_out_3]
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_4]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_4]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_4
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_5]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_5]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_5
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_6]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_6]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_6
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_7]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_7]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_7
+endgroup
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_7}]
+set_property location {3 895 -818} [get_bd_cells axi_gpio_8]
+set_property location {3 915 -965} [get_bd_cells axi_gpio_9]
+set_property location {3 942 -1108} [get_bd_cells axi_gpio_10]
+set_property location {3 896 -1278} [get_bd_cells axi_gpio_11]
+set_property location {3 885 -1427} [get_bd_cells axi_gpio_12]
+set_property location {3 868 -1561} [get_bd_cells axi_gpio_13]
+set_property location {4 1245 -1289} [get_bd_cells axi_gpio_14]
+set_property location {3 919 -1710} [get_bd_cells axi_gpio_14]
+copy_bd_objs /  [get_bd_cells {IR_transmission_7}]
+set_property location {4 1290 -782} [get_bd_cells IR_transmission_8]
+set_property location {4 1291 -826} [get_bd_cells IR_transmission_8]
+copy_bd_objs /  [get_bd_cells {IR_transmission_8}]
+set_property location {4 1213 -981} [get_bd_cells IR_transmission_9]
+copy_bd_objs /  [get_bd_cells {IR_transmission_9}]
+set_property location {4 1292 -1116} [get_bd_cells IR_transmission_10]
+copy_bd_objs /  [get_bd_cells {IR_transmission_10}]
+set_property location {4 1317 -1271} [get_bd_cells IR_transmission_11]
+copy_bd_objs /  [get_bd_cells {IR_transmission_11}]
+set_property location {4 1298 -1411} [get_bd_cells IR_transmission_12]
+copy_bd_objs /  [get_bd_cells {IR_transmission_12}]
+set_property location {4 1314 -1564} [get_bd_cells IR_transmission_13]
+copy_bd_objs /  [get_bd_cells {IR_transmission_13}]
+set_property location {4 1317 -1720} [get_bd_cells IR_transmission_14]
+connect_bd_net [get_bd_pins axi_gpio_8/gpio_io_o] [get_bd_pins IR_transmission_8/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_8/gpio_io_o> is being overridden by the user with net <axi_gpio_8_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_8/gpio2_io_o] [get_bd_pins IR_transmission_8/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_8/gpio2_io_o> is being overridden by the user with net <axi_gpio_8_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_9/gpio_io_o] [get_bd_pins IR_transmission_9/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_9/gpio_io_o> is being overridden by the user with net <axi_gpio_9_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_9/gpio2_io_o] [get_bd_pins IR_transmission_9/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_9/gpio2_io_o> is being overridden by the user with net <axi_gpio_9_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_10/gpio_io_o] [get_bd_pins IR_transmission_10/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_10/gpio_io_o> is being overridden by the user with net <axi_gpio_10_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_10/gpio2_io_o] [get_bd_pins IR_transmission_10/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_10/gpio2_io_o> is being overridden by the user with net <axi_gpio_10_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_11/gpio_io_o] [get_bd_pins IR_transmission_11/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_11/gpio_io_o> is being overridden by the user with net <axi_gpio_11_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_11/gpio2_io_o] [get_bd_pins IR_transmission_11/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_11/gpio2_io_o> is being overridden by the user with net <axi_gpio_11_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_12/gpio_io_o] [get_bd_pins IR_transmission_12/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_12/gpio_io_o> is being overridden by the user with net <axi_gpio_12_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_12/gpio2_io_o] [get_bd_pins IR_transmission_12/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_12/gpio2_io_o> is being overridden by the user with net <axi_gpio_12_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_13/gpio_io_o] [get_bd_pins IR_transmission_13/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_13/gpio_io_o> is being overridden by the user with net <axi_gpio_13_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_13/gpio2_io_o] [get_bd_pins IR_transmission_13/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_13/gpio2_io_o> is being overridden by the user with net <axi_gpio_13_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_14/gpio_io_o] [get_bd_pins IR_transmission_14/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_14/gpio_io_o> is being overridden by the user with net <axi_gpio_14_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_14/gpio2_io_o] [get_bd_pins IR_transmission_14/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_14/gpio2_io_o> is being overridden by the user with net <axi_gpio_14_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_8/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_9/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_10/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_11/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_12/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_13/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_14/send]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_8/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_8/S_AXI]
+Slave segment '/axi_gpio_8/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4128_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_9/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_9/S_AXI]
+Slave segment '/axi_gpio_9/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4129_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_10/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_10/S_AXI]
+Slave segment '/axi_gpio_10/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x412A_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_11/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_11/S_AXI]
+Slave segment '/axi_gpio_11/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x412B_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_12/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_12/S_AXI]
+Slave segment '/axi_gpio_12/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x412C_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_13/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_13/S_AXI]
+Slave segment '/axi_gpio_13/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x412D_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1565.176 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_14/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_14/S_AXI]
+Slave segment '/axi_gpio_14/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x412E_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1565.176 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_8/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_9/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_10/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_11/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_12/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_13/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_14/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_8]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_8]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_8
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_9]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_9]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_9
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_10]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_10]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_10
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_11]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_11]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_11
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_12]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_12]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_12
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_13]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_13]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_13
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_14]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_14]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_14
+endgroup
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_14}]
+set_property location {3 1076 -1978} [get_bd_cells axi_gpio_15]
+set_property location {4 1672 -381} [get_bd_cells IR_transmission_8]
+set_property location {4 1646 -535} [get_bd_cells IR_transmission_9]
+set_property location {4 1633 -711} [get_bd_cells IR_transmission_10]
+set_property location {4 1625 -880} [get_bd_cells IR_transmission_11]
+set_property location {4 1637 -1064} [get_bd_cells IR_transmission_12]
+set_property location {4 1644 -1254} [get_bd_cells IR_transmission_13]
+set_property location {4 1629 -1432} [get_bd_cells IR_transmission_14]
+startgroup
+set_property location {3 1151 -2360} [get_bd_cells axi_gpio_24]
+set_property location {3 1151 -2600} [get_bd_cells axi_gpio_15]
+set_property location {3 1151 -1660} [get_bd_cells axi_gpio_16]
+set_property location {3 1151 -1760} [get_bd_cells axi_gpio_18]
+set_property location {3 1151 -1860} [get_bd_cells axi_gpio_19]
+set_property location {3 1151 -2800} [get_bd_cells axi_gpio_20]
+set_property location {3 1151 -1960} [get_bd_cells axi_gpio_21]
+set_property location {3 1151 -2060} [get_bd_cells axi_gpio_22]
+set_property location {3 1151 -2860} [get_bd_cells axi_gpio_23]
+set_property location {3 1151 -2960} [get_bd_cells axi_gpio_17]
+endgroup
+set_property location {3.5 1375 -2442} [get_bd_cells axi_gpio_15]
+set_property location {4 1344 -1886} [get_bd_cells axi_gpio_15]
+set_property location {3 833 -1342} [get_bd_cells axi_gpio_15]
+copy_bd_objs /  [get_bd_cells {IR_transmission_14}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_15}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_15}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_17}]
+set_property location {3 1078 -2264} [get_bd_cells axi_gpio_22]
+set_property location {3 1066 -2103} [get_bd_cells axi_gpio_21]
+set_property location {3 1058 -2447} [get_bd_cells axi_gpio_20]
+set_property location {3 1100 -1894} [get_bd_cells axi_gpio_20]
+set_property location {3 1072 -2491} [get_bd_cells axi_gpio_24]
+set_property location {3 1071 -2326} [get_bd_cells axi_gpio_23]
+set_property location {3 1083 -2663} [get_bd_cells axi_gpio_17]
+set_property location {3 1066 -1256} [get_bd_cells axi_gpio_15]
+set_property location {3 1068 -1383} [get_bd_cells axi_gpio_16]
+set_property location {3 1074 -1188} [get_bd_cells axi_gpio_15]
+set_property location {3 1069 -1326} [get_bd_cells axi_gpio_16]
+set_property location {3 1111 -1464} [get_bd_cells axi_gpio_17]
+connect_bd_net [get_bd_pins axi_gpio_15/gpio_io_o] [get_bd_pins IR_transmission_15/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_15/gpio_io_o> is being overridden by the user with net <axi_gpio_15_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_15/gpio2_io_o] [get_bd_pins IR_transmission_15/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_15/gpio2_io_o> is being overridden by the user with net <axi_gpio_15_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_16/gpio_io_o] [get_bd_pins IR_transmission_16/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_16/gpio_io_o> is being overridden by the user with net <axi_gpio_16_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_16/gpio2_io_o] [get_bd_pins IR_transmission_16/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_16/gpio2_io_o> is being overridden by the user with net <axi_gpio_16_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+set_property location {3 1091 -1480} [get_bd_cells axi_gpio_17]
+startgroup
+set_property location {3 1067 -1835} [get_bd_cells axi_gpio_17]
+set_property location {3 1067 -1905} [get_bd_cells axi_gpio_18]
+set_property location {3 1067 -1975} [get_bd_cells axi_gpio_19]
+set_property location {3 1067 -2465} [get_bd_cells axi_gpio_20]
+set_property location {3 1067 -2535} [get_bd_cells axi_gpio_21]
+set_property location {3 1067 -2605} [get_bd_cells axi_gpio_22]
+set_property location {3 1067 -3095} [get_bd_cells axi_gpio_23]
+set_property location {3 1067 -3235} [get_bd_cells axi_gpio_24]
+endgroup
+startgroup
+set_property location {3 1068 -3384} [get_bd_cells axi_gpio_24]
+set_property location {3 1068 -1844} [get_bd_cells axi_gpio_17]
+set_property location {3 1068 -1854} [get_bd_cells axi_gpio_18]
+set_property location {3 1068 -2144} [get_bd_cells axi_gpio_19]
+set_property location {3 1068 -2474} [get_bd_cells axi_gpio_20]
+set_property location {3 1068 -2484} [get_bd_cells axi_gpio_21]
+set_property location {3 1068 -3244} [get_bd_cells axi_gpio_23]
+set_property location {3 1068 -2774} [get_bd_cells axi_gpio_22]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_17/gpio_io_o] [get_bd_pins IR_transmission_17/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_17/gpio_io_o> is being overridden by the user with net <axi_gpio_17_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_17/gpio2_io_o] [get_bd_pins IR_transmission_17/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_17/gpio2_io_o> is being overridden by the user with net <axi_gpio_17_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+set_property location {3 1066 -1919} [get_bd_cells axi_gpio_18]
+connect_bd_net [get_bd_pins axi_gpio_18/gpio_io_o] [get_bd_pins IR_transmission_18/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_18/gpio_io_o> is being overridden by the user with net <axi_gpio_18_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_18/gpio2_io_o] [get_bd_pins IR_transmission_18/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_18/gpio2_io_o> is being overridden by the user with net <axi_gpio_18_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+copy_bd_objs /  [get_bd_cells {IR_transmission_18}]
+set_property location {4 1612 -2144} [get_bd_cells IR_transmission_19]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+copy_bd_objs /  [get_bd_cells {IR_transmission_19}]
+set_property location {4 1673 -2390} [get_bd_cells IR_transmission_20]
+set_property location {4 1695 -2569} [get_bd_cells IR_transmission_21]
+set_property location {4 1627 -2315} [get_bd_cells IR_transmission_20]
+set_property location {4 1642 -2476} [get_bd_cells IR_transmission_21]
+set_property location {4 1615 -2768} [get_bd_cells IR_transmission_22]
+set_property location {3 1087 -3005} [get_bd_cells axi_gpio_23]
+set_property location {3 1085 -3202} [get_bd_cells axi_gpio_24]
+set_property location {4 1690 -3007} [get_bd_cells IR_transmission_23]
+set_property location {4 1687 -3190} [get_bd_cells IR_transmission_24]
+connect_bd_net [get_bd_pins axi_gpio_19/gpio_io_o] [get_bd_pins IR_transmission_19/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_19/gpio_io_o> is being overridden by the user with net <axi_gpio_19_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_19/gpio2_io_o] [get_bd_pins IR_transmission_19/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_19/gpio2_io_o> is being overridden by the user with net <axi_gpio_19_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_20/gpio_io_o] [get_bd_pins IR_transmission_20/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_20/gpio_io_o> is being overridden by the user with net <axi_gpio_20_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_20/gpio2_io_o] [get_bd_pins IR_transmission_20/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_20/gpio2_io_o> is being overridden by the user with net <axi_gpio_20_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_21/gpio_io_o] [get_bd_pins IR_transmission_21/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_21/gpio_io_o> is being overridden by the user with net <axi_gpio_21_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_21/gpio2_io_o] [get_bd_pins IR_transmission_21/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_21/gpio2_io_o> is being overridden by the user with net <axi_gpio_21_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_22/gpio_io_o] [get_bd_pins IR_transmission_22/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_22/gpio_io_o> is being overridden by the user with net <axi_gpio_22_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_22/gpio2_io_o] [get_bd_pins IR_transmission_22/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_22/gpio2_io_o> is being overridden by the user with net <axi_gpio_22_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_23/gpio_io_o] [get_bd_pins IR_transmission_23/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_23/gpio_io_o> is being overridden by the user with net <axi_gpio_23_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_23/gpio2_io_o] [get_bd_pins IR_transmission_23/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_23/gpio2_io_o> is being overridden by the user with net <axi_gpio_23_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_24/gpio_io_o] [get_bd_pins IR_transmission_24/addr]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_24/gpio_io_o> is being overridden by the user with net <axi_gpio_24_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>.
+connect_bd_net [get_bd_pins axi_gpio_24/gpio2_io_o] [get_bd_pins IR_transmission_24/code]
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_24/gpio2_io_o> is being overridden by the user with net <axi_gpio_24_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_15/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_16/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_17/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_18/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_19/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_20/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_21/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_22/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_23/send]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins IR_transmission_24/send]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_15/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_15/S_AXI]
+Slave segment '/axi_gpio_15/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x412F_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1647.672 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_16/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_16/S_AXI]
+Slave segment '/axi_gpio_16/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4130_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1680.047 ; gain = 32.375
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_17/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_17/S_AXI]
+Slave segment '/axi_gpio_17/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4131_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1680.047 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_18/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_18/S_AXI]
+Slave segment '/axi_gpio_18/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4132_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1702.434 ; gain = 22.387
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_19/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_19/S_AXI]
+Slave segment '/axi_gpio_19/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4133_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1702.434 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_20/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_20/S_AXI]
+Slave segment '/axi_gpio_20/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4134_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1709.738 ; gain = 7.305
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_21/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_21/S_AXI]
+Slave segment '/axi_gpio_21/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4135_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1709.746 ; gain = 0.008
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_22/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_22/S_AXI]
+Slave segment '/axi_gpio_22/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4136_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1745.266 ; gain = 35.520
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_23/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_23/S_AXI]
+Slave segment '/axi_gpio_23/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4137_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1745.266 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_24/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_24/S_AXI]
+Slave segment '/axi_gpio_24/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4138_0000 [ 64K ]>.
+apply_bd_automation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1772.301 ; gain = 27.035
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_15/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_16/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_17/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_18/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_19/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_20/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_21/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_22/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_23/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (125 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins IR_transmission_24/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_15]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_15]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_15
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_16]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_16]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_16
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_17]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_17]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_17
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_18]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_18]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_18
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_19]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_19]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_19
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_20]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_20]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_20
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_21]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_21]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_21
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_22]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_22]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_22
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_23]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_23]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_23
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells IR_transmission_24]
+make_bd_intf_pins_external  [get_bd_cells IR_transmission_24]
+INFO: [BD 5-409] No interface pins to be made external for /IR_transmission_24
+endgroup
+save_bd_design
+Wrote  : <C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 reset_run synth_1
+reset_run design_1_xbar_0_synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Feb 25 13:09:50 2026] Launched synth_1...
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(125). Command ignored
+CRITICAL WARNING: [BD 41-1347] Reset pin /axi_interconnect_0/M01_ARESETN (associated clock /axi_interconnect_0/M01_ACLK) is connected to asynchronous reset source /processing_system7_0/FCLK_RESET0_N.
+This may prevent design from meeting timing. Instead it should be connected to reset source /rst_ps7_0_125M/peripheral_aresetn.
+Wrote  : <C:\Users\azati\OneDrive\Desktop\Own_IR_Standard\FPGA_Part\Own_IR_transmitter\Own_IR_transmitter.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_13 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_13 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_16 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_17 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_18 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_19 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_20 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_21 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_22 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_23 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_24 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_16 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_17 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_18 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_19 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_20 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_21 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_22 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_23 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IR_transmission_24 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/tier2_xbar_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/tier2_xbar_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/tier2_xbar_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/tier2_xbar_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_pc .
+Exporting to file c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_1
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_2
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_3
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_4
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_5
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_6
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_7
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_8
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_14_9
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_2_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_3_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_4_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_4_1
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_4_2
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_1
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_2
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_3
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_4
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_5
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_axi_gpio_7_6
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_tier2_xbar_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_tier2_xbar_1_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_tier2_xbar_2_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_tier2_xbar_3_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_xbar_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 3737aa0c22dab1df; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_2_0, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_0, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_4_0, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_5, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_1, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_4_1, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_6, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_2, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_3_0, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_4, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_3, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_0, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_4, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_1, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_5, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_9, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_6, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_4_2, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_7, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_2, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_14_8, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_7_3, cache-ID = 22a5735fe12c0ac3; cache size = 2.939 MB.
+[Tue Mar 10 16:07:34 2026] Launched design_1_xbar_0_synth_1, design_1_IR_transmission_1_1_synth_1, design_1_IR_transmission_9_0_synth_1, design_1_IR_transmission_7_0_synth_1, design_1_IR_transmission_8_0_synth_1, design_1_IR_transmission_0_1_synth_1, design_1_IR_transmission_1_0_synth_1, design_1_IR_transmission_3_0_synth_1, design_1_IR_transmission_3_1_synth_1, design_1_IR_transmission_3_2_synth_1, design_1_IR_transmission_3_3_synth_1, design_1_tier2_xbar_1_0_synth_1, design_1_tier2_xbar_2_0_synth_1, design_1_tier2_xbar_0_0_synth_1, design_1_IR_transmission_10_0_synth_1, design_1_IR_transmission_11_0_synth_1, design_1_IR_transmission_12_0_synth_1, design_1_IR_transmission_13_0_synth_1, design_1_IR_transmission_17_0_synth_1, design_1_IR_transmission_15_1_synth_1, design_1_IR_transmission_18_0_synth_1, design_1_IR_transmission_15_0_synth_1, design_1_IR_transmission_19_0_synth_1, design_1_IR_transmission_19_1_synth_1, design_1_IR_transmission_14_0_synth_1, design_1_tier2_xbar_3_0_synth_1, design_1_IR_transmission_19_4_synth_1, design_1_IR_transmission_19_2_synth_1, design_1_IR_transmission_19_3_synth_1, synth_1...
+Run output will be captured here:
+design_1_xbar_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_xbar_0_synth_1/runme.log
+design_1_IR_transmission_1_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_1_synth_1/runme.log
+design_1_IR_transmission_9_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_9_0_synth_1/runme.log
+design_1_IR_transmission_7_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_7_0_synth_1/runme.log
+design_1_IR_transmission_8_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_8_0_synth_1/runme.log
+design_1_IR_transmission_0_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_0_1_synth_1/runme.log
+design_1_IR_transmission_1_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_0_synth_1/runme.log
+design_1_IR_transmission_3_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_0_synth_1/runme.log
+design_1_IR_transmission_3_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_1_synth_1/runme.log
+design_1_IR_transmission_3_2_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_2_synth_1/runme.log
+design_1_IR_transmission_3_3_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_3_synth_1/runme.log
+design_1_tier2_xbar_1_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_tier2_xbar_1_0_synth_1/runme.log
+design_1_tier2_xbar_2_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_tier2_xbar_2_0_synth_1/runme.log
+design_1_tier2_xbar_0_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_tier2_xbar_0_0_synth_1/runme.log
+design_1_IR_transmission_10_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_10_0_synth_1/runme.log
+design_1_IR_transmission_11_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_11_0_synth_1/runme.log
+design_1_IR_transmission_12_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_12_0_synth_1/runme.log
+design_1_IR_transmission_13_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_13_0_synth_1/runme.log
+design_1_IR_transmission_17_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_17_0_synth_1/runme.log
+design_1_IR_transmission_15_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_15_1_synth_1/runme.log
+design_1_IR_transmission_18_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_18_0_synth_1/runme.log
+design_1_IR_transmission_15_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_15_0_synth_1/runme.log
+design_1_IR_transmission_19_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_0_synth_1/runme.log
+design_1_IR_transmission_19_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_1_synth_1/runme.log
+design_1_IR_transmission_14_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_14_0_synth_1/runme.log
+design_1_tier2_xbar_3_0_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_tier2_xbar_3_0_synth_1/runme.log
+design_1_IR_transmission_19_4_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_4_synth_1/runme.log
+design_1_IR_transmission_19_2_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_2_synth_1/runme.log
+design_1_IR_transmission_19_3_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_19_3_synth_1/runme.log
+synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
+[Tue Mar 10 16:07:39 2026] Launched impl_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:13 ; elapsed = 00:02:41 . Memory (MB): peak = 2010.371 ; gain = 206.188
+INFO: [Coretcl 2-12] '/axi_gpio_24/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_gpio_24/S_AXI' selected.
+reset_run synth_1
+reset_run design_1_IR_transmission_1_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_1_synth_1
+
+reset_run design_1_IR_transmission_3_2_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_2_synth_1
+
+launch_runs synth_1 -jobs 16
+[Tue Mar 10 17:11:33 2026] Launched design_1_IR_transmission_1_1_synth_1, design_1_IR_transmission_3_2_synth_1...
+Run output will be captured here:
+design_1_IR_transmission_1_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_1_synth_1/runme.log
+design_1_IR_transmission_3_2_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_2_synth_1/runme.log
+[Tue Mar 10 17:11:33 2026] Launched synth_1...
 Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
-[Wed Feb 25 13:09:50 2026] Launched impl_1...
+reset_run synth_1
+reset_run design_1_IR_transmission_1_1_synth_1
+reset_run design_1_IR_transmission_3_2_synth_1
+make_wrapper -files [get_files C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd] -top
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Mar 10 17:12:19 2026] Launched design_1_IR_transmission_1_1_synth_1, design_1_IR_transmission_3_2_synth_1, synth_1...
+Run output will be captured here:
+design_1_IR_transmission_1_1_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_1_1_synth_1/runme.log
+design_1_IR_transmission_3_2_synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/design_1_IR_transmission_3_2_synth_1/runme.log
+synth_1: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
+[Tue Mar 10 17:12:20 2026] Launched impl_1...
 Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log
 open_run impl_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1729.652 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.277 . Memory (MB): peak = 2331.434 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 306 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -53,16 +714,90 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.897 . Memory (MB): peak = 2443.723 ; gain = 7.215
-Restored from archive | CPU: 5.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.900 . Memory (MB): peak = 2443.723 ; gain = 7.215
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2443.723 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.649 . Memory (MB): peak = 3045.250 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.650 . Memory (MB): peak = 3045.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3045.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:01:56 ; elapsed = 00:00:47 . Memory (MB): peak = 2569.148 ; gain = 1161.547
+open_run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 3218.430 ; gain = 973.594
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Mar 10 17:37:13 2026] Launched synth_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
+[Tue Mar 10 17:37:13 2026] Launched impl_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 3409.918 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 306 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.579 . Memory (MB): peak = 3409.918 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.579 . Memory (MB): peak = 3409.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3409.918 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 3409.918 ; gain = 0.000
 open_bd_design {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 2667.895 ; gain = 0.000
-file copy -force C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_receiver/design_1_wrapper.bit
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 25 17:48:17 2026...
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Mar 10 18:00:15 2026] Launched synth_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
+[Tue Mar 10 18:00:15 2026] Launched impl_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Mar 10 18:08:15 2026] Launched synth_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/synth_1/runme.log
+[Tue Mar 10 18:08:15 2026] Launched impl_1...
+Run output will be captured here: C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3434.402 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4941.891 ; gain = 1507.488
+set_property PROGRAM.FILE {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.

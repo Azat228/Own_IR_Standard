@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Sun Feb 22 22:42:02 2026
+//Date        : Tue Mar 10 16:06:06 2026
 //Host        : Azat running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -32,7 +32,29 @@ module design_1_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     ir_out_0,
-    ir_out_1);
+    ir_out_1,
+    ir_out_10,
+    ir_out_11,
+    ir_out_12,
+    ir_out_13,
+    ir_out_14,
+    ir_out_15,
+    ir_out_16,
+    ir_out_17,
+    ir_out_18,
+    ir_out_19,
+    ir_out_2,
+    ir_out_20,
+    ir_out_21,
+    ir_out_22,
+    ir_out_23,
+    ir_out_3,
+    ir_out_4,
+    ir_out_5,
+    ir_out_6,
+    ir_out_7,
+    ir_out_8,
+    ir_out_9);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -56,6 +78,28 @@ module design_1_wrapper
   inout FIXED_IO_ps_srstb;
   output [0:0]ir_out_0;
   output [0:0]ir_out_1;
+  output ir_out_10;
+  output ir_out_11;
+  output ir_out_12;
+  output ir_out_13;
+  output ir_out_14;
+  output ir_out_15;
+  output ir_out_16;
+  output ir_out_17;
+  output ir_out_18;
+  output ir_out_19;
+  output ir_out_2;
+  output ir_out_20;
+  output ir_out_21;
+  output ir_out_22;
+  output ir_out_23;
+  output ir_out_3;
+  output ir_out_4;
+  output ir_out_5;
+  output ir_out_6;
+  output ir_out_7;
+  output ir_out_8;
+  output ir_out_9;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -80,6 +124,28 @@ module design_1_wrapper
   wire FIXED_IO_ps_srstb;
   wire [0:0]ir_out_0;
   wire [0:0]ir_out_1;
+  wire ir_out_10;
+  wire ir_out_11;
+  wire ir_out_12;
+  wire ir_out_13;
+  wire ir_out_14;
+  wire ir_out_15;
+  wire ir_out_16;
+  wire ir_out_17;
+  wire ir_out_18;
+  wire ir_out_19;
+  wire ir_out_2;
+  wire ir_out_20;
+  wire ir_out_21;
+  wire ir_out_22;
+  wire ir_out_23;
+  wire ir_out_3;
+  wire ir_out_4;
+  wire ir_out_5;
+  wire ir_out_6;
+  wire ir_out_7;
+  wire ir_out_8;
+  wire ir_out_9;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -104,5 +170,27 @@ module design_1_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .ir_out_0(ir_out_0),
-        .ir_out_1(ir_out_1));
+        .ir_out_1(ir_out_1),
+        .ir_out_10(ir_out_10),
+        .ir_out_11(ir_out_11),
+        .ir_out_12(ir_out_12),
+        .ir_out_13(ir_out_13),
+        .ir_out_14(ir_out_14),
+        .ir_out_15(ir_out_15),
+        .ir_out_16(ir_out_16),
+        .ir_out_17(ir_out_17),
+        .ir_out_18(ir_out_18),
+        .ir_out_19(ir_out_19),
+        .ir_out_2(ir_out_2),
+        .ir_out_20(ir_out_20),
+        .ir_out_21(ir_out_21),
+        .ir_out_22(ir_out_22),
+        .ir_out_23(ir_out_23),
+        .ir_out_3(ir_out_3),
+        .ir_out_4(ir_out_4),
+        .ir_out_5(ir_out_5),
+        .ir_out_6(ir_out_6),
+        .ir_out_7(ir_out_7),
+        .ir_out_8(ir_out_8),
+        .ir_out_9(ir_out_9));
 endmodule
