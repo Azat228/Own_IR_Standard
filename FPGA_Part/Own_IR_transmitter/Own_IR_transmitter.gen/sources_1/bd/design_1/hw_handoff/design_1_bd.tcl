@@ -214,7 +214,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {40000} \
+ ] $IR_transmission_2
+
   # Create instance: IR_transmission_3, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_3
@@ -225,7 +228,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {42000} \
+ ] $IR_transmission_3
+
   # Create instance: IR_transmission_4, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_4
@@ -236,7 +242,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {44000} \
+ ] $IR_transmission_4
+
   # Create instance: IR_transmission_5, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_5
@@ -247,7 +256,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {46000} \
+ ] $IR_transmission_5
+
   # Create instance: IR_transmission_6, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_6
@@ -258,7 +270,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {48000} \
+ ] $IR_transmission_6
+
   # Create instance: IR_transmission_7, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_7
@@ -269,7 +284,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {50000} \
+ ] $IR_transmission_7
+
   # Create instance: IR_transmission_8, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_8
@@ -280,7 +298,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {52000} \
+ ] $IR_transmission_8
+
   # Create instance: IR_transmission_9, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_9
@@ -291,7 +312,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {54000} \
+ ] $IR_transmission_9
+
   # Create instance: IR_transmission_10, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_10
@@ -302,7 +326,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {56000} \
+ ] $IR_transmission_10
+
   # Create instance: IR_transmission_11, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_11
@@ -313,7 +340,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {58000} \
+ ] $IR_transmission_11
+
   # Create instance: IR_transmission_12, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_12
@@ -324,7 +354,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {60000} \
+ ] $IR_transmission_12
+
   # Create instance: IR_transmission_13, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_13
@@ -335,7 +368,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {62000} \
+ ] $IR_transmission_13
+
   # Create instance: IR_transmission_14, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_14
@@ -346,7 +382,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {64000} \
+ ] $IR_transmission_14
+
   # Create instance: IR_transmission_15, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_15
@@ -357,7 +396,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {66000} \
+ ] $IR_transmission_15
+
   # Create instance: IR_transmission_16, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_16
@@ -368,7 +410,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {68000} \
+ ] $IR_transmission_16
+
   # Create instance: IR_transmission_17, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_17
@@ -379,7 +424,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {70000} \
+ ] $IR_transmission_17
+
   # Create instance: IR_transmission_18, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_18
@@ -390,7 +438,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {72000} \
+ ] $IR_transmission_18
+
   # Create instance: IR_transmission_19, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_19
@@ -401,7 +452,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {74000} \
+ ] $IR_transmission_19
+
   # Create instance: IR_transmission_20, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_20
@@ -412,7 +466,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {76000} \
+ ] $IR_transmission_20
+
   # Create instance: IR_transmission_21, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_21
@@ -423,7 +480,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {78000} \
+ ] $IR_transmission_21
+
   # Create instance: IR_transmission_22, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_22
@@ -434,7 +494,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {80000} \
+ ] $IR_transmission_22
+
   # Create instance: IR_transmission_23, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_23
@@ -445,7 +508,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {82000} \
+ ] $IR_transmission_23
+
   # Create instance: IR_transmission_24, and set properties
   set block_name IR_transmission
   set block_cell_name IR_transmission_24
@@ -456,7 +522,10 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.CARRIER_FREQ {84000} \
+ ] $IR_transmission_24
+
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \

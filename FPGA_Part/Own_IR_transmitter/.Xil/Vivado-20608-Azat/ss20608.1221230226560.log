@@ -1,0 +1,14 @@
+srcscan starts
+=============== Using vdb files for VHDL std libs ===========
+INFO: The vhdl library search path for library "std" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/std" (VHDL-1505)
+INFO: The vhdl library search path for library "synopsys" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/synopsys" (VHDL-1505)
+INFO: The vhdl library search path for library "ieee" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/ieee" (VHDL-1505)
+INFO: The vhdl library search path for library "unimacro" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/unimacro" (VHDL-1505)
+INFO: The vhdl library search path for library "unisim" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/unisim" (VHDL-1505)
+INFO: The vhdl library search path for library "vl" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/vl" (VHDL-1505)
+INFO: The vhdl library search path for library "xpm" is now "C:/Xilinx/Vivado/2020.2/data/precomp_hsv/vhdl/xpm" (VHDL-1505)
+INFO: analyzing module IR_transmission (VERI-9002)
+INFO: analyzing module design_1_IR_transmission_10_0 (VERI-9002)
+INFO: analyzing module design_1_IR_transmission_10_0_IR_transmission (VERI-9002)
+INFO: analyzing module glbl (VERI-9002)
+-- Analyzing VHDL file "c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_10_0/design_1_IR_transmission_10_0_sim_netlist.vhdl" into library xil_defaultlib (VHDL-9003)

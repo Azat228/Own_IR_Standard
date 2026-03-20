@@ -1,0 +1,8 @@
+srcscan starts
+INFO: analyzing module IR_transmission (VERI-9002)
+INFO: analyzing module design_1_IR_transmission_18_0 (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:design_1_IR_transmission_18_0
+END of tops
+c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_IR_transmission_18_0/synth/design_1_IR_transmission_18_0.v(58): INFO: compiling module 'design_1_IR_transmission_18_0_default' (VERI-1018)
+srcscan exits with return value 0

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue Mar 10 16:11:29 2026
+-- Date        : Tue Mar 10 16:11:27 2026
 -- Host        : Azat running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/azati/OneDrive/Desktop/Own_IR_Standard/FPGA_Part/Own_IR_transmitter/Own_IR_transmitter.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_0_0/design_1_tier2_xbar_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_tier2_xbar_0_0 -prefix
+--               design_1_tier2_xbar_0_0_ design_1_tier2_xbar_0_0_sim_netlist.vhdl
 -- Design      : design_1_tier2_xbar_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -73,8 +73,6 @@ entity design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_23_addr_arbiter_sasd";
 end design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_addr_arbiter_sasd;
 
 architecture STRUCTURE of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
@@ -1843,8 +1841,6 @@ entity design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_decerr_slave is
     \m_ready_d[1]_i_2_0\ : in STD_LOGIC;
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_decerr_slave : entity is "axi_crossbar_v2_1_23_decerr_slave";
 end design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_decerr_slave;
 
 architecture STRUCTURE of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_decerr_slave is
@@ -2061,8 +2057,6 @@ entity design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_splitter : entity is "axi_crossbar_v2_1_23_splitter";
 end design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_splitter;
 
 architecture STRUCTURE of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_splitter is
@@ -2416,8 +2410,6 @@ entity design_1_tier2_xbar_0_0_axi_register_slice_v2_1_22_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tier2_xbar_0_0_axi_register_slice_v2_1_22_axic_register_slice : entity is "axi_register_slice_v2_1_22_axic_register_slice";
 end design_1_tier2_xbar_0_0_axi_register_slice_v2_1_22_axic_register_slice;
 
 architecture STRUCTURE of design_1_tier2_xbar_0_0_axi_register_slice_v2_1_22_axic_register_slice is
@@ -5679,8 +5671,6 @@ entity design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_crossbar_sasd : entity is "axi_crossbar_v2_1_23_crossbar_sasd";
 end design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_crossbar_sasd;
 
 architecture STRUCTURE of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_crossbar_sasd is
@@ -6347,8 +6337,6 @@ entity design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_axi_crossbar : entity is "axi_crossbar_v2_1_23_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of design_1_tier2_xbar_0_0_axi_crossbar_v2_1_23_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
