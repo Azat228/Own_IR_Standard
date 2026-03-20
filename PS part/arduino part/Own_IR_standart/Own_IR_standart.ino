@@ -5,7 +5,7 @@ unsigned int timings[maxBuffer]; // Durations (microseconds) of marks and spaces
 int bufPos = 0;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(inputPin, INPUT);
 }
 
